@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb2bf1ca6382c04f83dcc7a8e95fb18, type: 3}
+  m_Name: PlayerState
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerState
+  selectedCharacter: 03000000040000000200000000000000
+  hasBackstep: 0
+  backup:
+  - health: 5
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+  - health: 4
+    lastDiceResult: 1
+    lastTypeCard: Lucky
+    lastScannedCardID: Card_B1
+  - health: 0
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+  - health: 4
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+  polices:
+  - lastDiceResult: 6
+    laststepwhellValue: 
+    isWheel: 0
+  - lastDiceResult: 2
+    laststepwhellValue: 
+    isWheel: 0
+  - lastDiceResult: 1
+    laststepwhellValue: 
+    isWheel: 0
+  - lastDiceResult: 6
+    laststepwhellValue: 
+    isWheel: 0
+  players:
+  - characterIndex: 3
+    playername: chara2
+    health: 5
+    lastDiceResult: 2
+    lastTypeCard: Skill
+    lastScannedCardID: Card_S1
+  - characterIndex: 4
+    playername: chara4
+    health: 4
+    lastDiceResult: 5
+    lastTypeCard: Bad
+    lastScannedCardID: Card_S1
+  - characterIndex: 2
+    playername: chara5
+    health: 0
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+  - characterIndex: 0
+    playername: chara1
+    health: 4
+    lastDiceResult: 6
+    lastTypeCard: Bad
+    lastScannedCardID: Card_S1
+  currentTurn: 5
+  currentPlayerIndex: 3

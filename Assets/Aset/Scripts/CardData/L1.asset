@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691852b67b3380a4e830ce745c29d3da, type: 3}
+  m_Name: L1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: Card_L1
+  cardType: 1
+  nama: Smuggled Ration
+  attack: 0
+  heal: 1
+  spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
+  karakter: {fileID: 3822682153288146837, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  informasi: "A friendly inmate slips you a hidden stash of bread and protein bars\u2014contraband
+    that keeps you on your feet just a bit longer. (+1 health)"
+  isSkipCard: 0
+  isEfekReDice: 0
+  isRelifePlayer: 0

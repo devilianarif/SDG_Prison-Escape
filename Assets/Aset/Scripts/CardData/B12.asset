@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691852b67b3380a4e830ce745c29d3da, type: 3}
+  m_Name: B12
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: Card_B12
+  cardType: 0
+  nama: Hope Drain
+  attack: 0
+  heal: 0
+  spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
+  karakter: {fileID: -4944644611371511906, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  informasi: "A wave of despair washes over you as plans unravel. Even when something
+    good happens, you\u2019re too shaken to capitalize on it. (Next positive tile
+    is ignored)"
+  isSkipCard: 0
+  isEfekReDice: 0
+  isRelifePlayer: 0

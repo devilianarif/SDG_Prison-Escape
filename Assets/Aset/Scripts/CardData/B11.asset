@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691852b67b3380a4e830ce745c29d3da, type: 3}
+  m_Name: B11
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: Card_B11
+  cardType: 0
+  nama: Spotlight Alert
+  attack: 0
+  heal: 0
+  spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
+  karakter: {fileID: 7847968835805040011, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  informasi: "Floodlights blaze overhead. You freeze for a moment\u2014and the Cop
+    homes in on your location with alarming precision. (Closest cop moves 3 tiles
+    closer)"
+  isSkipCard: 0
+  isEfekReDice: 0
+  isRelifePlayer: 0
