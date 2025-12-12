@@ -16,6 +16,7 @@ public class policeManager : MonoBehaviour
     public Button penjaraplayer;
     public Button[] playerpilihbtn;
     public Button backplayerpenjara;
+    public Button applyplayerpenjara;
     public TMP_Text[] namaplayer;
     public Image[] healthbar;
     public GameObject[] paneltandapenjara;
@@ -41,7 +42,8 @@ public class policeManager : MonoBehaviour
         backplayerpenjara.onClick.AddListener(HidePenjaraUI);
         penjaraPlayerui.SetActive(false);
         uiCanvas.planeDistance = 30;
-        penjaraplayer.onClick.AddListener(ApplyPenjara);
+        applyplayerpenjara.onClick.AddListener(ApplyPenjara);
+    
         applyToLobyButton.interactable = playerState.polices[0].lastDiceResult > 0;
         pilihplayer();
 
@@ -65,6 +67,20 @@ public class policeManager : MonoBehaviour
         SceneManager.LoadScene(sceneLoby);
 
     }
+    public void ApplyPenjara()
+    {
+        if (penjaraTarget == -1) return;
+
+      
+        playerState.players[penjaraTarget].health = 0;
+
+  
+        playerState.NextPlayer();
+
+      
+        SceneManager.LoadScene(sceneLoby);
+    }
+
 
     public void RollPolice()
     {
@@ -131,6 +147,7 @@ public class policeManager : MonoBehaviour
         penjaraPlayerui.SetActive(true);
         uiCanvas.planeDistance = 1;
         LoadPlayerPenjaraUI();
+        
     }
     public void HidePenjaraUI()
     {
@@ -152,16 +169,7 @@ public class policeManager : MonoBehaviour
 
 
     }
-    public void ApplyPenjara()
-    {
-        if (penjaraTarget == -1) return;
-
-        playerState.players[penjaraTarget].health = 0;
-
-        HidePenjaraUI();
-
-
-    }
+ 
     public void LoadPlayerPenjaraUI()
     {
         for (int i = 0; i < 4; i++)

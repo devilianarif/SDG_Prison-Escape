@@ -48,9 +48,9 @@ MonoBehaviour:
   - characterIndex: 3
     playername: chara2
     health: 5
-    lastDiceResult: 2
-    lastTypeCard: Skill
-    lastScannedCardID: Card_S1
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
   - characterIndex: 4
     playername: chara4
     health: 4
@@ -65,9 +65,9 @@ MonoBehaviour:
     lastScannedCardID: 
   - characterIndex: 0
     playername: chara1
-    health: 4
+    health: 0
     lastDiceResult: 6
     lastTypeCard: Bad
     lastScannedCardID: Card_S1
-  currentTurn: 5
-  currentPlayerIndex: 3
+  currentTurn: 6
+  currentPlayerIndex: 0

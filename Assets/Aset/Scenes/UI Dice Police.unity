@@ -2429,6 +2429,7 @@ MonoBehaviour:
   valueReader: {fileID: 1201366538}
   lastResult: 0
   rollButton: {fileID: 0}
+  shakeForce: 3
   allowRead: 0
 --- !u!54 &1201366540
 Rigidbody:
@@ -2685,6 +2686,7 @@ MonoBehaviour:
   wheelObject: {fileID: 1259666506}
   rotatePower: 1500
   stopPower: 200
+  snapDone: 0
   setRX: 0
   setRY: 0
   reward:
@@ -2697,7 +2699,6 @@ MonoBehaviour:
   - down
   - right
   lastWheelValue: 
-  snapDone: 0
 --- !u!50 &1259666508
 Rigidbody2D:
   serializedVersion: 5
@@ -3034,6 +3035,7 @@ MonoBehaviour:
   valueReader: {fileID: 1336126106}
   lastResult: 0
   rollButton: {fileID: 0}
+  shakeForce: 3
   allowRead: 0
 --- !u!54 &1336126108
 Rigidbody:
@@ -3412,6 +3414,7 @@ MonoBehaviour:
   - {fileID: 8366308174263766502}
   - {fileID: 8150808964296556858}
   backplayerpenjara: {fileID: 3696958150146192067}
+  applyplayerpenjara: {fileID: 1075438191610796793}
   namaplayer:
   - {fileID: 5142673420958015342}
   - {fileID: 7976955832580381671}
@@ -4795,6 +4798,7 @@ MonoBehaviour:
   valueReader: {fileID: 1965119549}
   lastResult: 0
   rollButton: {fileID: 0}
+  shakeForce: 3
   allowRead: 0
 --- !u!54 &1965119551
 Rigidbody:
@@ -5663,7 +5667,7 @@ Canvas:
   m_GameObject: {fileID: 3465478205831479049}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 6212148552911596224}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -7310,6 +7314,7 @@ MonoBehaviour:
   valueReader: {fileID: 6623170591615529628}
   lastResult: 0
   rollButton: {fileID: 0}
+  shakeForce: 3
   allowRead: 0
 --- !u!65 &2888508950104398606
 BoxCollider:
@@ -7854,7 +7859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3730278119335265140
 MonoBehaviour:
   m_ObjectHideFlags: 0
