@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -1999099768842101487, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "A guard spots suspicious movement and blows the whistle. Echoing shrieks
-    alert everyone nearby\u2014and the Cop speeds up. (Police move 2 steps closer)"
+    alert everyone nearby\u2014and the Cop speeds up."
+  efekkartu: Police move 2 steps closer
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

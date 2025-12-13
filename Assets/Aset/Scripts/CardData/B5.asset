@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 444602110966544841, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "A hidden line snaps under your foot. You hit the floor hard\u2014dusty,
-    bruised, and definitely behind schedule. (Move -2 tiles)"
+    bruised, and definitely behind schedule."
+  efekkartu: Move -2 tiles
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

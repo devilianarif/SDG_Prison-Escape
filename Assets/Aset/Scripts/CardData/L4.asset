@@ -20,8 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -8157313501343053767, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "A gamble-worthy relic from the prisoners' gambling ring. They aren\u2019t
-    perfectly fair\u2026 but today, they\u2019re bending the odds your way. (Reroll
-    Dice)"
+    perfectly fair\u2026 but today, they\u2019re bending the odds your way."
+  efekkartu: Reroll Dice
   isSkipCard: 0
   isEfekReDice: 1
   isRelifePlayer: 0

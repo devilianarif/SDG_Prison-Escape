@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -5955364703834488030, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "A mysterious concoction brewed secretly in the prison workshop\u2014half
-    medicine, half miracle, but it restores your strength. (+1 health)"
+    medicine, half miracle, but it restores your strength."
+  efekkartu: +1 health
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -1999099768842101487, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "Behind a loose brick, you uncover a stash left by past escapees\u2014notes,
-    tools, even helpful tips for surviving what\u2019s ahead. (draw 1 positive card)"
+    tools, even helpful tips for surviving what\u2019s ahead."
+  efekkartu: Draw 1 positive card
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

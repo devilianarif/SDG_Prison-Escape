@@ -20,8 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 444602110966544841, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "Your escape rhythm kicks in. Footsteps light, focus razor-sharp\u2014you
-    move like someone who\u2019s been planning this run for years. (+1 to dice for
-    2 rounds)"
+    move like someone who\u2019s been planning this run for years."
+  efekkartu: +1 to dice for 2 rounds
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

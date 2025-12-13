@@ -20,8 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 3822682153288146837, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: Your heart pounds. Your senses sharpen. Every escape route feels more
-    obvious than before. Fate bends in your favor. (Roll dice 2 times, choose the
-    higher number)
+    obvious than before. Fate bends in your favor.
+  efekkartu: Roll dice 2 times, choose the higher number
   isSkipCard: 0
   isEfekReDice: 1
   isRelifePlayer: 0

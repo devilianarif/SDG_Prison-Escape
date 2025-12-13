@@ -15,8 +15,8 @@ MonoBehaviour:
   id: Chara_1
   role: 'Strategist '
   ability_as: Explore / Controller
-  efek: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  efek: View the top 2 cards of the deck. You may return them to the top or insert
+    them anywhere in the middle of the deck.
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
   karakter: {fileID: -1999099768842101487, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   health: 5

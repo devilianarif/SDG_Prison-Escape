@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Chara_6
   m_EditorClassIdentifier: Assembly-CSharp::CardChara
   id: Chara_6
-  nama: Chara 6
-  informasikartu: ppppp
+  role: Escape Artist
+  ability_as: Unshackle / Breaker
+  efek: 'Remove 1 negative effect from yourself OR an ally (movement debuff, trap
+    effect, or card debuff). (Cooldown: 3 rounds)'
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
-  karakter: {fileID: 0}
+  karakter: {fileID: 444602110966544841, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   health: 5

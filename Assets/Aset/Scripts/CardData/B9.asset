@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -810934804949610949, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "You\u2019re yanked aside and thrown into a temporary holding cell.
-    No movement, no progress, just cold walls and wasted time. (skip next turn)"
+    No movement, no progress, just cold walls and wasted time."
+  efekkartu: Skip next turn
   isSkipCard: 1
   isEfekReDice: 0
   isRelifePlayer: 0

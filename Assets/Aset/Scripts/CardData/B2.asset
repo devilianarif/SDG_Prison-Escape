@@ -20,7 +20,8 @@ MonoBehaviour:
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 7847968835805040011, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   informasi: "A chaotic brawl erupts, and you\u2019re caught in the middle. A baton,
-    elbow, or stray punch knocks the wind out of you. (-1 health)"
+    elbow, or stray punch knocks the wind out of you."
+  efekkartu: -1 health
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Chara_5
   m_EditorClassIdentifier: Assembly-CSharp::CardChara
   id: Chara_5
-  nama: Chara 5
-  informasikartu: ppppp
+  role: Medic
+  ability_as: 'First Aid / Utility '
+  efek: 'Restore 1 HP to yourself OR an ally. (Cooldown: 4 rounds)'
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
-  karakter: {fileID: 0}
+  karakter: {fileID: 3822682153288146837, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
   health: 5
