@@ -1,0 +1,848 @@
+fileFormatVersion: 2
+guid: e300a7e61beb72349a4ddacd8de1cb39
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3536974648514691367
+    second: set card_0
+  - first:
+      213: 7654666569756043192
+    second: set card_1
+  - first:
+      213: -5124646977269522569
+    second: set card_2
+  - first:
+      213: 8371234023291875413
+    second: set card_3
+  - first:
+      213: -7122429583146884887
+    second: set card_4
+  - first:
+      213: 1722548323516559151
+    second: set card_5
+  - first:
+      213: -2528939265099007778
+    second: set card_6
+  - first:
+      213: -7555129194424326377
+    second: set card_7
+  - first:
+      213: 3577769586780971738
+    second: set card_8
+  - first:
+      213: 7900989086272773888
+    second: set card_9
+  - first:
+      213: 8250483034585622005
+    second: set card_10
+  - first:
+      213: -1170060937177581285
+    second: set card_11
+  - first:
+      213: 103165441833447384
+    second: set card_12
+  - first:
+      213: -4409644748604746038
+    second: set card_13
+  - first:
+      213: -8012554407402230658
+    second: set card_14
+  - first:
+      213: 3451371664731209646
+    second: set card_15
+  - first:
+      213: -5945099219714592273
+    second: set card_16
+  - first:
+      213: 5180266528093640117
+    second: set card_17
+  - first:
+      213: -7392185908057554304
+    second: set card_18
+  - first:
+      213: 6929242061969160177
+    second: set card_19
+  - first:
+      213: -6030190477575148041
+    second: set card_20
+  - first:
+      213: -3136336446214853529
+    second: set card_21
+  - first:
+      213: -5869105994782232597
+    second: set card_22
+  - first:
+      213: 8084073429741927991
+    second: set card_23
+  - first:
+      213: -8973376887176390397
+    second: set card_24
+  - first:
+      213: 7759038418843387814
+    second: set card_25
+  - first:
+      213: -8233544575957476521
+    second: set card_26
+  - first:
+      213: 5656006256492727013
+    second: set card_27
+  - first:
+      213: 3161341457273001621
+    second: set card_28
+  - first:
+      213: -2614279984936061018
+    second: set card_29
+  - first:
+      213: 8375843663693070230
+    second: set card_30
+  - first:
+      213: -7502283845412787214
+    second: set card_31
+  - first:
+      213: -1442683511461235197
+    second: set card_32
+  - first:
+      213: -78040688021316587
+    second: set card_33
+  - first:
+      213: -7475363217040410056
+    second: set card_34
+  - first:
+      213: 2643039300696060934
+    second: set card_35
+  - first:
+      213: 5898441958407620984
+    second: set card_36
+  - first:
+      213: -5631871710086284051
+    second: set card_37
+  - first:
+      213: 3621387525898695506
+    second: set card_38
+  - first:
+      213: -6590739325353616438
+    second: set card_39
+  - first:
+      213: -4280170317438853768
+    second: set card_40
+  - first:
+      213: 6057142782375047747
+    second: set card_41
+  - first:
+      213: -2488536560142923850
+    second: set card_42
+  - first:
+      213: -1782481056675082560
+    second: set card_43
+  - first:
+      213: -7903746204953427878
+    second: set card_44
+  - first:
+      213: 6379326540342742763
+    second: set card_45
+  - first:
+      213: 1397252904221974931
+    second: set card_46
+  - first:
+      213: 1632689727247214019
+    second: set card_47
+  - first:
+      213: 3016655906808993389
+    second: set card_48
+  - first:
+      213: 6164592484919588293
+    second: set card_49
+  - first:
+      213: 6503467451413233039
+    second: set card_50
+  - first:
+      213: 3179842248326208058
+    second: set card_51
+  - first:
+      213: 7142298976421738890
+    second: set card_52
+  - first:
+      213: 8943050713958425223
+    second: set card_53
+  - first:
+      213: -880190640337207373
+    second: set card_54
+  - first:
+      213: -3001174570865010186
+    second: set card_55
+  - first:
+      213: 4292359710315824621
+    second: set card_56
+  - first:
+      213: 3672627344219470522
+    second: set card_57
+  - first:
+      213: 6650818869610141420
+    second: set card_58
+  - first:
+      213: -5333997782824101982
+    second: set card_59
+  - first:
+      213: 2072773235316747924
+    second: set card_60
+  - first:
+      213: -4022927402895228930
+    second: set card_61
+  - first:
+      213: 2270347504976153832
+    second: set card_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: set card_2
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 5813
+        width: 74
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f1298c9b891e8b0800000000000000
+      internalID: -5124646977269522569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_4
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 5077
+        width: 1041
+        height: 1041
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0ebc6c70c082d90800000000000000
+      internalID: -7122429583146884887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_7
+      rect:
+        serializedVersion: 2
+        x: 4292
+        y: 5072
+        width: 1013
+        height: 840
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717a726c60ac62790800000000000000
+      internalID: -7555129194424326377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_8
+      rect:
+        serializedVersion: 2
+        x: 5781
+        y: 5119
+        width: 886
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2a64cbb7ac6a130800000000000000
+      internalID: 3577769586780971738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_9
+      rect:
+        serializedVersion: 2
+        x: 7018
+        y: 5046
+        width: 905
+        height: 905
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fd68576b3f5ad60800000000000000
+      internalID: 7900989086272773888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5026
+        width: 1057
+        height: 1057
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5ecd56b9a9f7270800000000000000
+      internalID: 8250483034585622005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_12
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 5016
+        width: 1050
+        height: 1050
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df24993c648e6100800000000000000
+      internalID: 103165441833447384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_22
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 3834
+        width: 985
+        height: 985
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befa3ef813fbc8ea0800000000000000
+      internalID: -5869105994782232597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_23
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 3892
+        width: 1041
+        height: 1041
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ef0fdf3f5603070800000000000000
+      internalID: 8084073429741927991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_26
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 4104
+        width: 979
+        height: 901
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bd5b3d4d29cbd80800000000000000
+      internalID: -8233544575957476521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_29
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 3877
+        width: 905
+        height: 905
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7f87a643638bbd0800000000000000
+      internalID: -2614279984936061018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_32
+      rect:
+        serializedVersion: 2
+        x: 5847
+        y: 3864
+        width: 970
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3063a007dfe8afbe0800000000000000
+      internalID: -1442683511461235197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3838
+        width: 1057
+        height: 1057
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83af841a2cc224890800000000000000
+      internalID: -7475363217040410056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_40
+      rect:
+        serializedVersion: 2
+        x: 4226
+        y: 2709
+        width: 1155
+        height: 1155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dd2ea06c7c994c0800000000000000
+      internalID: -4280170317438853768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_43
+      rect:
+        serializedVersion: 2
+        x: 7113
+        y: 2890
+        width: 905
+        height: 905
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cec4064cea5347e0800000000000000
+      internalID: -1782481056675082560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_45
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 2531
+        width: 970
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beec95770bbe78850800000000000000
+      internalID: 6379326540342742763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2511
+        width: 1057
+        height: 1057
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5eff418aa78a610800000000000000
+      internalID: 1632689727247214019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_56
+      rect:
+        serializedVersion: 2
+        x: 5849
+        y: 1294
+        width: 970
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5c2952a66819b30800000000000000
+      internalID: 4292359710315824621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_60
+      rect:
+        serializedVersion: 2
+        x: 5849
+        y: 18
+        width: 970
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49eedf68648f3cc10800000000000000
+      internalID: 2072773235316747924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set card_62
+      rect:
+        serializedVersion: 2
+        x: 6650
+        y: 709
+        width: 75
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec4cc6e605e18f10800000000000000
+      internalID: 2270347504976153832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 345ecb24d0149584c9391d5740947da9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      set card_0: 3536974648514691367
+      set card_1: 7654666569756043192
+      set card_10: 8250483034585622005
+      set card_11: -1170060937177581285
+      set card_12: 103165441833447384
+      set card_13: -4409644748604746038
+      set card_14: -8012554407402230658
+      set card_15: 3451371664731209646
+      set card_16: -5945099219714592273
+      set card_17: 5180266528093640117
+      set card_18: -7392185908057554304
+      set card_19: 6929242061969160177
+      set card_2: -5124646977269522569
+      set card_20: -6030190477575148041
+      set card_21: -3136336446214853529
+      set card_22: -5869105994782232597
+      set card_23: 8084073429741927991
+      set card_24: -8973376887176390397
+      set card_25: 7759038418843387814
+      set card_26: -8233544575957476521
+      set card_27: 5656006256492727013
+      set card_28: 3161341457273001621
+      set card_29: -2614279984936061018
+      set card_3: 8371234023291875413
+      set card_30: 8375843663693070230
+      set card_31: -7502283845412787214
+      set card_32: -1442683511461235197
+      set card_33: -78040688021316587
+      set card_34: -7475363217040410056
+      set card_35: 2643039300696060934
+      set card_36: 5898441958407620984
+      set card_37: -5631871710086284051
+      set card_38: 3621387525898695506
+      set card_39: -6590739325353616438
+      set card_4: -7122429583146884887
+      set card_40: -4280170317438853768
+      set card_41: 6057142782375047747
+      set card_42: -2488536560142923850
+      set card_43: -1782481056675082560
+      set card_44: -7903746204953427878
+      set card_45: 6379326540342742763
+      set card_46: 1397252904221974931
+      set card_47: 1632689727247214019
+      set card_48: 3016655906808993389
+      set card_49: 6164592484919588293
+      set card_5: 1722548323516559151
+      set card_50: 6503467451413233039
+      set card_51: 3179842248326208058
+      set card_52: 7142298976421738890
+      set card_53: 8943050713958425223
+      set card_54: -880190640337207373
+      set card_55: -3001174570865010186
+      set card_56: 4292359710315824621
+      set card_57: 3672627344219470522
+      set card_58: 6650818869610141420
+      set card_59: -5333997782824101982
+      set card_6: -2528939265099007778
+      set card_60: 2072773235316747924
+      set card_61: -4022927402895228930
+      set card_62: 2270347504976153832
+      set card_7: -7555129194424326377
+      set card_8: 3577769586780971738
+      set card_9: 7900989086272773888
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
