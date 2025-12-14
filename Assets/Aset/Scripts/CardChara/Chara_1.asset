@@ -18,5 +18,5 @@ MonoBehaviour:
   efek: View the top 2 cards of the deck. You may return them to the top or insert
     them anywhere in the middle of the deck.
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
-  karakter: {fileID: -1999099768842101487, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: 5712867871659811231, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
