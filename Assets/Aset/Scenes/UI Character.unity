@@ -601,8 +601,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -974,7 +974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &234695903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1353,10 +1353,10 @@ RectTransform:
   - {fileID: 794419371}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1207.75, y: -1466.05}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302511822
 MonoBehaviour:
@@ -1693,10 +1693,10 @@ RectTransform:
   - {fileID: 1871454752}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2026.15, y: -475.35}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381382898
 MonoBehaviour:
@@ -3686,8 +3686,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5522,10 +5522,10 @@ RectTransform:
   - {fileID: 359782998}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2026.15, y: -1466.05}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086834627
 MonoBehaviour:
@@ -7028,8 +7028,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -7056,7 +7056,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7512,10 +7512,10 @@ RectTransform:
   - {fileID: 1950928992}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1207.75, y: -475.35}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690548078
 MonoBehaviour:
@@ -9475,10 +9475,10 @@ RectTransform:
   - {fileID: 1527318792}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 389.34998, y: -1466.05}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009812414
 MonoBehaviour:
@@ -9746,8 +9746,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -9774,7 +9774,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10365,9 +10365,9 @@ RectTransform:
   - {fileID: 1200370438761452776}
   m_Father: {fileID: 8488930834403786214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 446.61096, y: -1418.343}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 945.2219, y: 320.9287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &320358805399576991
@@ -10391,10 +10391,10 @@ RectTransform:
   - {fileID: 2482925977445792632}
   m_Father: {fileID: 6290626482008224529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 389.34998, y: -475.35}
-  m_SizeDelta: {x: 740, y: 950.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &336410755705807649
 GameObject:
@@ -10413,7 +10413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &395806795847301837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11034,9 +11034,9 @@ RectTransform:
   - {fileID: 3183779571792681117}
   m_Father: {fileID: 8488930834403786214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 446.61096, y: -215.46436}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 945.2219, y: 320.9287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1277908714168404666
@@ -14538,9 +14538,9 @@ RectTransform:
   - {fileID: 8970678785048376972}
   m_Father: {fileID: 8488930834403786214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 446.61096, y: -1017.3835}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 945.2219, y: 320.9287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7129725431560732515
@@ -15279,9 +15279,9 @@ RectTransform:
   - {fileID: 3861260819612078926}
   m_Father: {fileID: 8488930834403786214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 446.61096, y: -616.42395}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 945.2219, y: 320.9287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8469715290210992877
@@ -15662,9 +15662,9 @@ RectTransform:
   - {fileID: 5166837266514975169}
   m_Father: {fileID: 8488930834403786214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 446.61096, y: -1813.7537}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 945.2219, y: 309.8309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807

@@ -218,10 +218,10 @@ public class CardGameManager : MonoBehaviour
 
             if (i < matiPlayertext.Length)
                 matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " di penjara"
+                    ? "Player " + (i + 1) + " is imprisoned"
                     : "";
 
-            Debug.Log("HP P3 sekarang: " + gameManager.playerState.players[2].health);
+            Debug.Log("P3 Current HP : " + gameManager.playerState.players[2].health);
         }
 
 
@@ -275,7 +275,7 @@ public class CardGameManager : MonoBehaviour
 
             if (i < matiPlayertext.Length)
                 matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " di penjara"
+                    ? "Player " + (i + 1) + " is imprisoned"
                     : "";
 
             RectTransform rt = cardPlayerButton[i].GetComponent<RectTransform>();
@@ -418,7 +418,7 @@ public class CardGameManager : MonoBehaviour
 
             if (i < matiPlayertext.Length)
                 matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " di penjara"
+                    ? "Player " + (i + 1) + " is imprisoned"
                     : "";
 
             RectTransform rt = cardPlayerButton[i].GetComponent<RectTransform>();

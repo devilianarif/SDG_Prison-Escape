@@ -36,7 +36,7 @@ public class QRScannerCard : MonoBehaviour
 
             if (devices.Length == 0)
             {
-                Debug.Log("Tidak ada kamera.");
+                Debug.Log("No camera.");
                 return;
             }
 
@@ -59,7 +59,7 @@ public class QRScannerCard : MonoBehaviour
         {
             cam.Play();
             preview.texture = cam;
-            Debug.Log("Kamera QRScannerCard dimulai.");
+            Debug.Log("Camera QRScannerCard start.");
         }
     }
 
@@ -124,7 +124,7 @@ public class QRScannerCard : MonoBehaviour
         if (cam != null && cam.isPlaying)
         {
             cam.Stop();
-            Debug.Log("Kamera QRScannerCard berhenti.");
+            Debug.Log("Camera QRScannerCard stop.");
         }
 
         preview.texture = defaultTexture;

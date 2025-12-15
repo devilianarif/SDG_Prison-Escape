@@ -39,7 +39,7 @@ public class CardTypeRoll : MonoBehaviour
         cardTypeText.text = type;
         cardTypeText.color = GetColorByType(type);
 
-        Debug.Log("Kartu terpilih: " + type);
+        Debug.Log("Selected Card : " + type);
 
         if (history != null)
             history.AddHistory(type);

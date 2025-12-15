@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class CardDatabase : MonoBehaviour
 {
-    [Header("Kartu efek (CardData)")]
+    [Header("Effect Card (CardData)")]
     public CardData[] allCards;
 
-    [Header("Kartu karakter (CardChara)")]
+    [Header("Character Card (CardChara)")]
     public CardChara[] allCharacterCards;
 
     public CardData GetCard(string id)

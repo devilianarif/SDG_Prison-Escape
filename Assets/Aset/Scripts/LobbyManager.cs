@@ -233,7 +233,7 @@ public class LobbyManager : MonoBehaviour
             if (hp <= 0)
             {
                 playerMatiImage[i].gameObject.SetActive(true);
-                playerMatiText[i].text = "P" + (i + 1) + " gugur";
+                playerMatiText[i].text = "P" + (i + 1) + " eliminated";
             }
             else
             {

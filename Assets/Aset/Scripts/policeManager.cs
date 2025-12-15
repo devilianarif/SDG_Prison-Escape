@@ -11,7 +11,7 @@ public class policeManager : MonoBehaviour
     public Button applyToLobyButton;
     public Button rollPoliceButton;
     public TMP_Text valueText;
-    [Header("ui penjara")]
+    [Header("ui prison")]
     public GameObject penjaraPlayerui;
     public Button penjaraplayer;
     public Button[] playerpilihbtn;
@@ -193,7 +193,7 @@ public class policeManager : MonoBehaviour
             bool dead = player.health <= 0;
 
             paneltandapenjara[i].SetActive(dead);
-            textTandaPenajra[i].text = dead ? "Player " + (i + 1) + " di penjara" : "";
+            textTandaPenajra[i].text = dead ? "Player " + (i + 1) + " is imprisoned" : "";
             playerpilihbtn[i].interactable = !dead;
         }
     }
