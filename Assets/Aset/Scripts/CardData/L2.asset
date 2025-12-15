@@ -18,7 +18,7 @@ MonoBehaviour:
   attack: 0
   heal: 1
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: 444602110966544841, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: -4280170317438853768, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: "You slip through a half-locked maintenance door, bypassing the nurse\u2019s
     station to discreetly treat your wounds before anyone notices."
   efekkartu: +1 health

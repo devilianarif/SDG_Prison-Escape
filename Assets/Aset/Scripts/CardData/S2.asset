@@ -18,7 +18,7 @@ MonoBehaviour:
   attack: 0
   heal: 1
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: 7847968835805040011, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: -5869105994782232597, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: "You reach behind a neglected emergency locker. Bandages, antiseptic,
     gauze\u2014exactly what you needed."
   efekkartu: +1 health

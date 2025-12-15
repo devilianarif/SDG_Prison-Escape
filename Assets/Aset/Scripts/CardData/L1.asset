@@ -18,7 +18,7 @@ MonoBehaviour:
   attack: 0
   heal: 1
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: 3822682153288146837, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: -4280170317438853768, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: "A friendly inmate slips you a hidden stash of bread and protein bars\u2014contraband
     that keeps you on your feet just a bit longer."
   efekkartu: +1 health

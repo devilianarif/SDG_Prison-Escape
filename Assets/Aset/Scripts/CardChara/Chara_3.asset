@@ -18,5 +18,5 @@ MonoBehaviour:
   efek: 'Disable traps or negative tiles affecting you OR your partner for 1 round.
     (Cooldown: 3 rounds)'
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
-  karakter: {fileID: 7847968835805040011, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: 9077042528420511927, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5

@@ -18,7 +18,7 @@ MonoBehaviour:
   attack: 0
   heal: 0
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: -8157313501343053767, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: 4292359710315824621, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: A flooded maintenance hall leaves you slogging through thick muck. Every
     step feels twice as heavy.
   efekkartu: "Halves your pair\u2019s dice"

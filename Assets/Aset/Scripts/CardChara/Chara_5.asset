@@ -17,5 +17,5 @@ MonoBehaviour:
   ability_as: 'First Aid / Utility '
   efek: 'Restore 1 HP to yourself OR an ally. (Cooldown: 4 rounds)'
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
-  karakter: {fileID: 3822682153288146837, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: -7130844508404820948, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5

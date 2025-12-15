@@ -18,7 +18,7 @@ MonoBehaviour:
   attack: 1
   heal: 0
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: -5955364703834488030, guid: ad8620866dc44a44fb5ff283c0d450c3, type: 3}
+  karakter: {fileID: 2072773235316747924, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: This hallway feels alive with bad luck. No matter how you move, you
     keep slipping, stumbling, or getting snagged on something.
   efekkartu: -1 on dice roll
