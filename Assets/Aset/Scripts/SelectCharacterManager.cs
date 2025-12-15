@@ -19,7 +19,7 @@ public class SelectCharacterManager : MonoBehaviour
     public TMP_Text[] playerroletextchara;
     public TMP_Text[] playerroletext;
     public TMP_Text[] playerabilityastext;
-     public TMP_Text[] playerefektext;
+    public TMP_Text[] playerefektext;
 
 
     public Sprite spriteNormal;
@@ -119,6 +119,9 @@ public class SelectCharacterManager : MonoBehaviour
 
             playerState.players[i].playername = data.role;
 
+            playerroletext[i].text = data.role;
+            playerabilityastext[i].text = data.ability_as;
+            playerefektext[i].text = data.efek;
 
         }
 
@@ -144,9 +147,6 @@ public class SelectCharacterManager : MonoBehaviour
             playerCharacterCard[i].sprite = data.cardfull;
             playerCharacter[i].sprite = data.karakter;
             playerroletextchara[i].text = $"Player {i + 1} - {data.role}";
-            playerroletext[i].text = data.role;
-            playerabilityastext[i].text = data.ability_as;
-            playerabilityastext[i].text = data.efek;
         }
     }
 
