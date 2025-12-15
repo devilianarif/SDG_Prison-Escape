@@ -404,7 +404,7 @@ public class GameManager : MonoBehaviour
 
     void DisableActionFase3()
     {
-        Debug.Log("Fase 3 dinonaktifkan.");
+        Debug.Log("Fase 3 is disabled.");
 
 
         cardGameManager.HideScanUIPanel();
@@ -423,7 +423,7 @@ public class GameManager : MonoBehaviour
         // kalau HP 0 dan efeknya heal (hpChange < 0), abaikan
         if (currentHp <= 0 && hpChange < 0)
         {
-            Debug.Log("Player " + (targetIndex + 1) + " HP 0. Heal diabaikan.");
+            Debug.Log("Player " + (targetIndex + 1) + " HP 0. Heal is ignored.");
             return;
         }
 
@@ -450,7 +450,7 @@ public class GameManager : MonoBehaviour
     {
         playerState.NextPlayer();
         justApplied = true; // penting
-        Debug.Log("=== Next Player. Sekarang giliran Player "
+        Debug.Log("=== Next Player. Now, turn of Player "
             + (playerState.currentPlayerIndex + 1) + " ===");
 
         SceneManager.LoadScene(sceneloby);
@@ -459,7 +459,7 @@ public class GameManager : MonoBehaviour
     }
     public void ForceBackToFase1FromSkip()
     {
-        Debug.Log("Kembali paksa ke Fase 1 dari SKIP karena kartu invalid.");
+        Debug.Log("Forced back to Phase 1 from SKIP due to an invalid card.");
 
         currentFase = 0;
         ActionFaseUI();

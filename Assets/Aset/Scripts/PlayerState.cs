@@ -147,7 +147,7 @@ public class PlayerState : ScriptableObject
     public void SetDiceResult(int result)
     {
         players[currentPlayerIndex].lastDiceResult = result;
-        Debug.Log("Player " + (currentPlayerIndex + 1) + " hasil dadu diperbarui: " + result);
+        Debug.Log("Player " + (currentPlayerIndex + 1) + " result of dice is updated : " + result);
     }
 
     public void SetTypeCard(string type)
@@ -167,7 +167,7 @@ public class PlayerState : ScriptableObject
             players[currentPlayerIndex].health = 0;
 
         Debug.Log("Player " + (currentPlayerIndex + 1)
-            + " Kena Damage " + value
+            + " Get Damage " + value
             + " HP " + players[currentPlayerIndex].health);
 
 
@@ -177,7 +177,7 @@ public class PlayerState : ScriptableObject
     {
         if (players[currentPlayerIndex].health <= 0)
         {
-            Debug.Log("Player " + (currentPlayerIndex + 1) + " sudah 0 HP. Tidak bisa di-heal.");
+            Debug.Log("Player " + (currentPlayerIndex + 1) + " already 0 HP. Can't be healed.");
             return;
         }
 

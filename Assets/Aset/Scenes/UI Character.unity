@@ -601,8 +601,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -974,7 +974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &234695903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3686,8 +3686,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7028,8 +7028,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -7056,7 +7056,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9746,8 +9746,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: Look at the top 2 cards of the deck (you may place them back on top or
+    insert them into the middle of the deck)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -9774,7 +9774,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 35.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1

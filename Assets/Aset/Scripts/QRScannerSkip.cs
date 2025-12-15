@@ -36,7 +36,7 @@ public class QRScannerSkip : MonoBehaviour
 
             if (devices.Length == 0)
             {
-                Debug.Log("Tidak ada kamera ditemukan.");
+                Debug.Log("No camera found.");
                 return;
             }
 
@@ -59,7 +59,7 @@ public class QRScannerSkip : MonoBehaviour
         {
             cam.Play();
             preview.texture = cam;
-            Debug.Log("Kamera QRScannerSkip dimulai.");
+            Debug.Log("Camera QRScannerSkip start.");
         }
     }
 
@@ -116,7 +116,7 @@ public class QRScannerSkip : MonoBehaviour
         if (cam != null && cam.isPlaying)
         {
             cam.Stop();
-            Debug.Log("Kamera QRScannerSkip dihentikan.");
+            Debug.Log("Camera QRScannerSkip stop.");
         }
 
         preview.texture = defaultTexture;
