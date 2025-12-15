@@ -15,12 +15,14 @@ public class policeManager : MonoBehaviour
     public GameObject penjaraPlayerui;
     public Button penjaraplayer;
     public Button[] playerpilihbtn;
+    public Image[] charaplayer;
     public Button backplayerpenjara;
     public Button applyplayerpenjara;
     public TMP_Text[] namaplayer;
     public Image[] healthbar;
     public GameObject[] paneltandapenjara;
     public TMP_Text[] textTandaPenajra;
+    public CardChara[] characterDatabase;
 
 
 
@@ -43,7 +45,7 @@ public class policeManager : MonoBehaviour
         penjaraPlayerui.SetActive(false);
         uiCanvas.planeDistance = 30;
         applyplayerpenjara.onClick.AddListener(ApplyPenjara);
-    
+
         applyToLobyButton.interactable = playerState.polices[0].lastDiceResult > 0;
         pilihplayer();
 
@@ -71,13 +73,13 @@ public class policeManager : MonoBehaviour
     {
         if (penjaraTarget == -1) return;
 
-      
+
         playerState.players[penjaraTarget].health = 0;
 
-  
+
         playerState.NextPlayer();
 
-      
+
         SceneManager.LoadScene(sceneLoby);
     }
 
@@ -147,7 +149,7 @@ public class policeManager : MonoBehaviour
         penjaraPlayerui.SetActive(true);
         uiCanvas.planeDistance = 1;
         LoadPlayerPenjaraUI();
-        
+
     }
     public void HidePenjaraUI()
     {
@@ -169,26 +171,33 @@ public class policeManager : MonoBehaviour
 
 
     }
- 
+
     public void LoadPlayerPenjaraUI()
     {
         for (int i = 0; i < 4; i++)
         {
-            namaplayer[i].text = playerState.players[i].playername;
+            var player = playerState.players[i];
 
-            float fill = Mathf.Clamp01(playerState.players[i].health / 5f);
+            namaplayer[i].text = player.playername;
+
+            float fill = Mathf.Clamp01(player.health / 5f);
             healthbar[i].fillAmount = fill;
 
-            bool dead = playerState.players[i].health <= 0;
+            int charIndex = player.characterIndex;
+
+            if (charIndex >= 0 && charIndex < characterDatabase.Length)
+                charaplayer[i].sprite = characterDatabase[charIndex].karakter;
+            else
+                charaplayer[i].sprite = null;
+
+            bool dead = player.health <= 0;
 
             paneltandapenjara[i].SetActive(dead);
-
             textTandaPenajra[i].text = dead ? "Player " + (i + 1) + " di penjara" : "";
             playerpilihbtn[i].interactable = !dead;
         }
-
-
     }
+
     public void pilihplayer()
     {
         for (int i = 0; i < playerpilihbtn.Length; i++)
