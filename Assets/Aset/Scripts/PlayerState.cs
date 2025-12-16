@@ -19,6 +19,7 @@ public class PlayerState : ScriptableObject
 
 
 
+
     [System.Serializable]
     public class PlayerBackup
     {
@@ -149,11 +150,11 @@ public class PlayerState : ScriptableObject
         players[currentPlayerIndex].lastDiceResult = result;
         Debug.Log("Player " + (currentPlayerIndex + 1) + " result of dice is updated : " + result);
     }
-
     public void SetTypeCard(string type)
     {
         players[currentPlayerIndex].lastTypeCard = type;
     }
+
 
     public void SetScannedCardID(string id)
     {

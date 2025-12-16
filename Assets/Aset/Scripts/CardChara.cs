@@ -10,4 +10,6 @@ public class CardChara : ScriptableObject
     public Sprite cardfull;
     public Sprite karakter;
     public int health;
+    public string buffname;
+    
 }

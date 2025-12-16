@@ -12,6 +12,9 @@ public class CardTypeRoll : MonoBehaviour
     public GameManager gameManager;
 
     public string lastType;
+    [Header("Feature Toggle")]
+    public bool useHistory = false;
+
 
     // daftar tipe kartu
     private string[] cardTypes = { "Bad", "Lucky", "Skill" };
@@ -19,11 +22,20 @@ public class CardTypeRoll : MonoBehaviour
     void Start()
     {
         rolltypecard.onClick.AddListener(RandomType);
-        historyButton.onClick.AddListener(OpenHistory);
 
-        historyButton.gameObject.SetActive(true);
+        if (useHistory)
+        {
+            historyButton.onClick.AddListener(OpenHistory);
+            historyButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            historyButton.gameObject.SetActive(false);
+        }
+
         cardTypeText.text = "";
     }
+
 
     void OpenHistory()
     {
@@ -43,10 +55,9 @@ public class CardTypeRoll : MonoBehaviour
 
         if (history != null)
             history.AddHistory(type);
-
         lastType = type;
-
         gameManager.playerState.SetTypeCard(lastType);
+
         gameManager.SaveState();
         gameManager.UpdateChecklist();
     }

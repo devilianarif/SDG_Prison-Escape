@@ -98,10 +98,11 @@ public class CharacterButton : MonoBehaviour
 
 
     public void SetActivePlayer(int p)
-    {
-        currentPlayer = p;
-        RefreshInteractable();
-    }
+{
+    currentPlayer = p;
+    RefreshInteractable();
+}
+
 
     void SelectCharacter(int charIndex)
     {
@@ -122,11 +123,8 @@ public class CharacterButton : MonoBehaviour
         LockCharacter(charIndex, currentPlayer);
 
 
-        if (currentPlayer < 3)
-        {
-            currentPlayer++;
-            playerSlotUI.SelectPlayer(currentPlayer);
-        }
+        playerSlotUI.AdvanceTurn();
+
 
         RefreshInteractable();
     }

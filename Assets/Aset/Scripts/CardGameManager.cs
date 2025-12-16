@@ -13,6 +13,8 @@ public class CardGameManager : MonoBehaviour
     public CardDatabase database;
     [Header("UI kartu")]
     public Button ScanKartuButton;
+    public TMP_Text notif;
+
     public Button ScanKartuSkipButton;
     public string lastCardID;
     private bool isScanningCardType = false;
@@ -48,6 +50,8 @@ public class CardGameManager : MonoBehaviour
     public Action OnScanStarted;
     public Action OnCardInfoShown;
     public Action OnCardApplied;
+    [Header("Scan Rules")]
+    public bool useScanByType = false;
 
     void Start()
     {
@@ -63,6 +67,26 @@ public class CardGameManager : MonoBehaviour
         ShowCharacterDisplay();
         cardInfoPanel.SetActive(false);
         scanUIPanel.SetActive(false);
+        if (notif != null)
+            notif.gameObject.SetActive(false);
+    }
+    void ShowNotif(string message, float duration = 2f)
+    {
+        if (notif == null) return;
+
+        notif.text = message;
+        notif.gameObject.SetActive(true);
+
+        StopAllCoroutines();
+        StartCoroutine(HideNotifAfterDelay(duration));
+    }
+
+    IEnumerator HideNotifAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (notif != null)
+            notif.gameObject.SetActive(false);
     }
 
     void StartScanningCardType()
@@ -91,14 +115,43 @@ public class CardGameManager : MonoBehaviour
 
     void HandleQR(string id)
     {
+
         lastCardID = id;
         if (!isScanningCardType) return;
 
         var card = database.GetCard(id);
         if (card == null) return;
 
+        //  VALIDASI TIPE KARTU BERDASARKAN GACHA 
+        // ambil type hasil gacha player aktif
+        string gachaType = gameManager.playerState
+            .players[gameManager.playerState.currentPlayerIndex]
+            .lastTypeCard;
+
+        // ===== VALIDASI TIPE KARTU =====
+        if (useScanByType)
+        {
+            // belum roll → tidak boleh scan
+            if (string.IsNullOrEmpty(gachaType))
+            {
+                ShowNotif("You must roll a card type first.");
+                return;
+            }
+
+
+            // skip card selalu lolos
+            if (!card.isSkipCard && card.cardType.ToString() != gachaType)
+            {
+                ShowNotif("This card type does not match your roll.");
+                return;
+            }
+
+
+        }
+
+
         lastScannedCard = card;
-        // ===== TOLAK SKIP CARD DI SCANNER KARTU ==== 
+        //  TOLAK SKIP CARD DI SCANNER KARTU  
         if (card.isSkipCard)  // :contentReference[oaicite:0]{index=0}
         {
             scannerCardType.StopCamera();
@@ -111,6 +164,9 @@ public class CardGameManager : MonoBehaviour
         gameManager.playerState.SetScannedCardID(id);
         gameManager.SaveState();
         gameManager.UpdateChecklist();
+        if (notif != null)
+    notif.gameObject.SetActive(false);
+
         DisplayCardInfo(card);
 
         scannerCardType.StopCamera();
@@ -174,7 +230,7 @@ public class CardGameManager : MonoBehaviour
         }
 
 
-        cardInfodetail.text = "Attack : " + card.attack + "  Heal : " + card.heal + "\nInformation : " + card.informasi + "\nEffect : " + card.efekkartu ;
+        cardInfodetail.text = "Attack : " + card.attack + "  Heal : " + card.heal + "\nInformation : " + card.informasi + "\nEffect : " + card.efekkartu;
 
         ShowCardInfoPanel();
     }
