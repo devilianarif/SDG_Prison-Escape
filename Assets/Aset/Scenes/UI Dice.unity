@@ -15519,7 +15519,7 @@ MonoBehaviour:
   - {fileID: 8361759155658153234}
   - {fileID: 692465431283848907}
   - {fileID: 1588529742349914726}
-  useScanByType: 1
+  useScanByType: 0
 --- !u!224 &3804631081970198038
 RectTransform:
   m_ObjectHideFlags: 0
