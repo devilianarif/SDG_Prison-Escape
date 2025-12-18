@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: tunjukan kartu skip
+  m_text: Show the skip card
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bdeb8032b7d38bc4fb71e379a96b6c44, type: 2}
   m_sharedMaterial: {fileID: 2385333898475265699, guid: bdeb8032b7d38bc4fb71e379a96b6c44, type: 2}
@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -4112,7 +4112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4226,7 +4226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: 132}
+  m_AnchoredPosition: {x: 150, y: 172}
   m_SizeDelta: {x: 565.59, y: 57.0289}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831634491
@@ -5243,7 +5243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6149,7 +6149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -8378,7 +8378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268.85892, y: -60.499878}
+  m_AnchoredPosition: {x: 218.8589, y: -0.49988}
   m_SizeDelta: {x: 711.308, y: 287.147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597663708
@@ -8676,7 +8676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -10320,7 +10320,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 396.07}
-  m_SizeDelta: {x: 651.22, y: 123.3943}
+  m_SizeDelta: {x: 1051.22, y: 123.3943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889104877
 MonoBehaviour:
@@ -10342,7 +10342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yakin mau skip ?
+  m_text: Are you sure you want to skip ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bdeb8032b7d38bc4fb71e379a96b6c44, type: 2}
   m_sharedMaterial: {fileID: 2385333898475265699, guid: bdeb8032b7d38bc4fb71e379a96b6c44, type: 2}
@@ -10369,8 +10369,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 124
-  m_fontSizeBase: 124
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11435,7 +11435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: history
+  m_text: History
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15361,7 +15361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: next
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -16212,7 +16212,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -61.928, y: -0.0009460449}
-  m_SizeDelta: {x: 476.835, y: 71.19}
+  m_SizeDelta: {x: 496.835, y: 71.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &4483486194116135841
 Transform:
@@ -17501,7 +17501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.721, y: -0.0009460449}
+  m_AnchoredPosition: {x: -85.721, y: -0.0009460449}
   m_SizeDelta: {x: 445.249, y: 71.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5561546085646097612
@@ -17674,7 +17674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -66.64, y: -0.0009460449}
-  m_SizeDelta: {x: 467.411, y: 71.19}
+  m_SizeDelta: {x: 496.835, y: 71.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5659983921972781985
 GameObject:
@@ -19129,8 +19129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.76604, y: -0.0009460449}
-  m_SizeDelta: {x: 459.16, y: 71.19}
+  m_AnchoredPosition: {x: -66.76604, y: -0.0009460449}
+  m_SizeDelta: {x: 496.835, y: 71.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7657169499965906227
 CanvasRenderer:
