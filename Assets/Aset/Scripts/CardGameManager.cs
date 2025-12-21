@@ -165,7 +165,7 @@ public class CardGameManager : MonoBehaviour
         gameManager.SaveState();
         gameManager.UpdateChecklist();
         if (notif != null)
-    notif.gameObject.SetActive(false);
+            notif.gameObject.SetActive(false);
 
         DisplayCardInfo(card);
 
@@ -390,6 +390,16 @@ public class CardGameManager : MonoBehaviour
             return;
 
         var ps = gameManager.playerState;
+        var curr = gameManager.playerState.currentPlayerIndex;
+        var player = gameManager.playerState.players[curr];
+
+        // ===== CEK COOLDOWN KARTU =====
+        if (lastScannedCard.cooldownroundcard > 0 &&
+            player.cardCooldown > 0)
+        {
+            ShowNotif("Card is on cooldown");
+            return;
+        }
 
         // target mati normal → batal
         if (ps.players[selectedTargetIndex].health <= 0 &&
@@ -403,8 +413,10 @@ public class CardGameManager : MonoBehaviour
 
             BtnPlayerHide();
             HideCardInfoPanel();
-
+            ApplyCardCooldown(player);
             gameManager.EndActionAndReturnToLobby();
+
+
             OnCardApplied?.Invoke();
             return;
         }
@@ -415,10 +427,40 @@ public class CardGameManager : MonoBehaviour
             HideScanUIPanel();
             gameManager.OpenReDicePanel();
             return;
+
         }
+
+        if (lastScannedCard.isRerolcard)
+        {
+            var chara = gameManager
+                .cardGameManager
+                .database
+                .GetCharacter(ps.players[curr].characterIndex);
+
+            if (chara.bufrerolcard && player.charaBuffCooldown > 0)
+            {
+                ShowNotif("Character ability is on cooldown");
+                return;
+            }
+
+            HideCardInfoPanel();
+            HideScanUIPanel();
+
+            if (chara.bufrerolcard)
+                player.charaBuffCooldown = chara.coldoncharabuf;
+
+            ApplyCardCooldown(player); // ← WAJIB
+            gameManager.OpenRerollCardPanel();
+            return;
+        }
+
+
+
 
         int hpChange = GetHpChangeFromCard(lastScannedCard);
         gameManager.ApplyCardEffectToPlayer(selectedTargetIndex, hpChange);
+        ApplyCardCooldown(player);
+
 
         BtnPlayerHide();
         HideCardInfoPanel();
@@ -427,6 +469,18 @@ public class CardGameManager : MonoBehaviour
         OnCardApplied?.Invoke();
 
 
+    }
+    public CardData GetLastScannedCard()
+    {
+        return lastScannedCard;
+    }
+
+    void ApplyCardCooldown(PlayerState.PlayerData player)
+    {
+        if (lastScannedCard != null && lastScannedCard.cooldownroundcard > 0)
+        {
+            player.cardCooldown = lastScannedCard.cooldownroundcard;
+        }
     }
 
     public int GetHpChangeFromCard(CardData card)

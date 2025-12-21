@@ -15,6 +15,10 @@ public class PlayerState : ScriptableObject
         public int lastDiceResult; // hasil dadu terakhir
         public string lastTypeCard; // tipe kartu terakhir
         public string lastScannedCardID; // ID kartu terakhir yang discan
+
+        // ===== COOLDOWN =====
+        public int cardCooldown;        // sisa cooldown kartu
+        public int charaBuffCooldown;   // sisa cooldown buff karakter
     }
 
 
@@ -139,7 +143,22 @@ public class PlayerState : ScriptableObject
 
         // RESET NILAI AKSI UNTUK PLAYER BARU
         if (IsPlayerTurn())
+        {
             ResetActionData(currentPlayerIndex);
+
+            // TURUNKAN COOLDOWN
+            if (players[currentPlayerIndex].cardCooldown > 0)
+                players[currentPlayerIndex].cardCooldown--;
+
+            if (players[currentPlayerIndex].charaBuffCooldown > 0)
+                players[currentPlayerIndex].charaBuffCooldown--;
+        }
+        Debug.Log(
+            $"[TURN CHANGE] Player {currentPlayerIndex + 1} | " +
+            $"CardCD={players[currentPlayerIndex].cardCooldown} | " +
+            $"BuffCD={players[currentPlayerIndex].charaBuffCooldown}"
+        );
+
 
 
     }

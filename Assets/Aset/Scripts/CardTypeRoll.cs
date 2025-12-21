@@ -46,21 +46,25 @@ public class CardTypeRoll : MonoBehaviour
     void RandomType()
     {
         int index = Random.Range(0, cardTypes.Length);
-        string type = cardTypes[index];
+        lastType = cardTypes[index];
 
-        cardTypeText.text = type;
-        cardTypeText.color = GetColorByType(type);
+        cardTypeText.text = lastType;
+        cardTypeText.color = GetColorByType(lastType);
 
-        Debug.Log("Selected Card : " + type);
+        // AUTO COMMIT SAAT REROLL
+        if (gameManager.isRerollingCardType)
+        {
+            gameManager.SetLatestRerolledCardType(lastType);
+            return;
+        }
 
-        if (history != null)
-            history.AddHistory(type);
-        lastType = type;
+
+        // normal flow
         gameManager.playerState.SetTypeCard(lastType);
-
         gameManager.SaveState();
         gameManager.UpdateChecklist();
     }
+
 
     Color GetColorByType(string type)
     {

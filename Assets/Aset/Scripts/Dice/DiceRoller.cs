@@ -100,7 +100,8 @@ public class DiceRoller : MonoBehaviour
         lastResult = valueReader.GetValue();
         Debug.Log("Hasil dadu: " + lastResult);
 
-
+        // === TAMPILKAN NILAI RAW LANGSUNG ===
+        valueReader.ForceValue(lastResult);
 
         if (valueReader.gameManager != null && !valueReader.isPoliceDice)
         {
@@ -108,9 +109,37 @@ public class DiceRoller : MonoBehaviour
             valueReader.gameManager.UpdateChecklist();
             valueReader.gameManager.UpdateLatestDice(lastResult);
         }
-        isRolling = false;
+
+    
+    isRolling = false;
 
 
     }
+public void ResetDiceFully()
+{
+    allowRead = false;
+    isRolling = false;
+    lastResult = 0;
+
+    if (valueReader != null)
+        valueReader.ResetRecord();
+
+    foreach (var face in GetComponentsInChildren<DiceFace>())
+        face.ResetFace();
+
+    if (rb == null) return;
+
+    // 1. HENTIKAN GERAK SAAT MASIH NON-KINEMATIC
+    rb.linearVelocity = Vector3.zero;
+    rb.angularVelocity = Vector3.zero;
+
+    // 2. BARU JADIKAN KINEMATIC
+    rb.isKinematic = true;
+
+    // 3. RESET TRANSFORM
+    transform.position = startPos + Vector3.up * 0.1f;
+    transform.rotation = startRot;
+}
+
 
 }

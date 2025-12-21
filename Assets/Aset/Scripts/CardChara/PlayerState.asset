@@ -45,29 +45,37 @@ MonoBehaviour:
     laststepwhellValue: 
     isWheel: 0
   players:
-  - characterIndex: 3
+  - characterIndex: 0
     playername: chara2
     health: 5
-    lastDiceResult: 2
-    lastTypeCard: Skill
-    lastScannedCardID: Card_S1
+    lastDiceResult: 7
+    lastTypeCard: Bad
+    lastScannedCardID: Card_B1
+    cardCooldown: 0
+    charaBuffCooldown: 0
   - characterIndex: 4
     playername: chara4
     health: 4
-    lastDiceResult: 5
-    lastTypeCard: Bad
-    lastScannedCardID: Card_S1
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+    cardCooldown: 0
+    charaBuffCooldown: 0
   - characterIndex: 2
     playername: chara5
     health: 0
     lastDiceResult: 0
     lastTypeCard: 
     lastScannedCardID: 
-  - characterIndex: 0
+    cardCooldown: 0
+    charaBuffCooldown: 0
+  - characterIndex: 3
     playername: chara1
     health: 4
-    lastDiceResult: 6
-    lastTypeCard: Bad
-    lastScannedCardID: Card_S1
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+    cardCooldown: 0
+    charaBuffCooldown: 0
   currentTurn: 5
-  currentPlayerIndex: 3
+  currentPlayerIndex: 1

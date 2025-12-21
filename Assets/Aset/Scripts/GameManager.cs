@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public PlayerState playerState;
+    [Header("Dice UI")]
+    public DiceValueReader diceValueReader;
+    bool isInReDice = false;
+
+
     public string sceneloby;
     [Header("Turn Player")]
     public string playerturn;
@@ -49,6 +54,11 @@ public class GameManager : MonoBehaviour
     int pilihDiceResult = -1;
     int latestDiceResult = 0;
     int beforeDiceResult = 0;
+    [Header("Fasse 3 - rerol card")]
+    public GameObject fase34;
+    public Button applyrerolcard;
+    public bool isRerollingCardType = false;
+    private string latestRerolledCardType = "";
 
     [Header("Fase Skip - Scan Card Skip")]
     public CardGameManager skipCardGameManager;
@@ -62,6 +72,8 @@ public class GameManager : MonoBehaviour
     public bool justApplied = false;
     void Start()
     {
+        isRerollingCardType = false;
+
         if (justApplied)
         {
             justApplied = false;
@@ -117,8 +129,7 @@ public class GameManager : MonoBehaviour
         if (playerState.players[curr].health <= 0)
             return; // tidak boleh menyimpan state untuk player mati
 
-        if (currentFase == 0)
-            playerState.SetDiceResult(diceRoller.lastResult);
+
 
         if (currentFase == 1)
             playerState.SetTypeCard(cardTypeRoller.lastType);
@@ -127,6 +138,25 @@ public class GameManager : MonoBehaviour
             playerState.SetScannedCardID(cardGameManager.lastCardID);
 
 
+    }
+    public int GetFinalDiceValue(int rawValue)
+    {
+        int curr = playerState.currentPlayerIndex;
+
+        var chara = cardGameManager
+            .database
+            .GetCharacter(playerState.players[curr].characterIndex);
+
+        bool buffActive =
+            isInReDice &&
+            chara != null &&
+            chara.bufvdice &&
+            playerState.players[curr].charaBuffCooldown <= 0;
+
+        if (buffActive)
+            return rawValue + Mathf.RoundToInt(chara.valuedice);
+
+        return rawValue;
     }
 
 
@@ -202,16 +232,22 @@ public class GameManager : MonoBehaviour
     //=====================================================
     void ActionFase1()
     {
+
         if (mainCanvas)
             mainCanvas.planeDistance = diceCanvasPlaneDistance;
+
         hideskipUI();
         backFaseButton.gameObject.SetActive(false);
 
+        if (diceRoller != null)
+        {
+            diceRoller.ResetDiceFully();
+        }
 
         showdice3dui();
+
         nextFaseButtonText.text = "Next";
         nextFaseButton.gameObject.SetActive(true);
-
     }
 
     void showdice3dui()
@@ -271,7 +307,7 @@ public class GameManager : MonoBehaviour
     }
     public void OpenReDicePanel()
     {
-        int curr = playerState.currentPlayerIndex;
+        int curr = playerState.currentPlayerIndex; // <<< HARUS PALING ATAS
 
         beforeDiceResult = playerState.players[curr].lastDiceResult;
         pilihDiceResult = -1;
@@ -279,6 +315,8 @@ public class GameManager : MonoBehaviour
 
         pilihdadutext[0].text = "Before: " + beforeDiceResult;
         pilihdadutext[1].text = "Latest: 0";
+
+        isInReDice = true;
 
         if (mainCanvas != null)
             mainCanvas.planeDistance = diceCanvasPlaneDistance;
@@ -300,51 +338,89 @@ public class GameManager : MonoBehaviour
         pilihdadu[0].onClick.RemoveAllListeners();
         pilihdadu[1].onClick.RemoveAllListeners();
 
-        // tombol BEFORE
+        // === tombol BEFORE ===
         pilihdadu[0].onClick.AddListener(() =>
         {
             pilihDiceResult = beforeDiceResult;
 
-            pilihdadutext[0].text = "Before: " + beforeDiceResult + "\nSelected";
-
-            if (latestDiceResult != 0)
-                pilihdadutext[1].text = "Latest: " + latestDiceResult;
-
-            applydice.gameObject.SetActive(true);
-        });
-
-        // tombol LATEST
-        pilihdadu[1].onClick.AddListener(() =>
-        {
-            if (latestDiceResult == 0)
-                return; // belum ada hasil reroll
-
-            pilihDiceResult = latestDiceResult;
-
-            pilihdadutext[1].text = "Latest: " + latestDiceResult + "\nSelected";
-            pilihdadutext[0].text = "Before: " + beforeDiceResult;
-
-            applydice.gameObject.SetActive(true);
-        });
-
-
-    }
-
-    public void UpdateLatestDice(int value)
-    {
-        latestDiceResult = value;
-
-        if (pilihDiceResult == latestDiceResult)
-        {
-            pilihdadutext[1].text = "Latest: " + latestDiceResult + "\nSelected";
-        }
-        else
-        {
+            // tampilkan NILAI ORIGINAL SAJA
+            pilihdadutext[0].text = "Before: " + beforeDiceResult + " (selected)";
             pilihdadutext[1].text = "Latest: " + latestDiceResult;
-        }
+
+            // tampilkan DETAIL di resultText
+            int buff = GetBuffValue();
+            diceValueReader.ShowResult(beforeDiceResult, buff);
+            SaveDiceSelection(beforeDiceResult);
+
+            applydice.gameObject.SetActive(true);
+        });
+
+
+        // === tombol LATEST ===
+        pilihdadu[1].onClick.AddListener(() =>
+     {
+         if (latestDiceResult == 0) return;
+
+         pilihDiceResult = latestDiceResult;
+
+         pilihdadutext[1].text = "Latest: " + latestDiceResult + " (selected)";
+         pilihdadutext[0].text = "Before: " + beforeDiceResult;
+
+         int buff = GetBuffValue();
+         diceValueReader.ShowResult(latestDiceResult, buff);
+         SaveDiceSelection(latestDiceResult);
+
+
+         applydice.gameObject.SetActive(true);
+     });
 
 
     }
+
+    void SaveDiceSelection(int rawValue)
+    {
+        int curr = playerState.currentPlayerIndex;
+        int finalValue = rawValue;
+
+        int buff = GetBuffValue();
+        if (buff > 0)
+            finalValue += buff;
+
+        playerState.players[curr].lastDiceResult = finalValue;
+
+        Debug.Log($"[DICE SAVE] Raw={rawValue}, Buff={buff}, Final={finalValue}");
+
+        UpdateChecklist();
+    }
+
+    int GetBuffValue()
+    {
+        int curr = playerState.currentPlayerIndex;
+
+        var chara = cardGameManager
+            .database
+            .GetCharacter(playerState.players[curr].characterIndex);
+
+        if (
+            isInReDice &&
+            chara != null &&
+            chara.bufvdice &&
+            playerState.players[curr].charaBuffCooldown <= 0
+        )
+        {
+            return Mathf.RoundToInt(chara.valuedice);
+        }
+
+        return 0;
+    }
+
+    public void UpdateLatestDice(int rawValue)
+    {
+        latestDiceResult = rawValue;
+        pilihdadutext[1].text = "Latest: " + rawValue;
+    }
+
+
 
     void ApplyReDiceEffect()
     {
@@ -352,19 +428,95 @@ public class GameManager : MonoBehaviour
             return;
 
         int curr = playerState.currentPlayerIndex;
+        int baseDice = pilihDiceResult;
+        int finalDice = baseDice;
 
-        playerState.players[curr].lastDiceResult = pilihDiceResult;
+        var chara = cardGameManager
+            .database
+            .GetCharacter(playerState.players[curr].characterIndex);
+
+        bool buffActive = false;
+
+        if (chara != null && chara.bufvdice && playerState.players[curr].charaBuffCooldown <= 0)
+        {
+            finalDice += Mathf.RoundToInt(chara.valuedice);
+            buffActive = true;
+            playerState.players[curr].charaBuffCooldown = chara.coldoncharabuf;
+        }
+
+        playerState.players[curr].lastDiceResult = finalDice;
+
+        Debug.Log(
+            $"[DICE APPLY] Base={baseDice} | BuffActive={buffActive} | Final={finalDice}"
+        );
+
+        var card = cardGameManager.GetLastScannedCard();
+        if (card != null && card.cooldownroundcard > 0)
+            playerState.players[curr].cardCooldown = card.cooldownroundcard;
 
         EndActionAndReturnToLobby();
-
-
     }
+
+
     public void HideReDicePanel()
     {
         for (int i = 0; i < fase33.Length; i++)
             if (fase33[i] != null)
                 fase33[i].SetActive(false);
     }
+
+    public void OpenRerollCardPanel()
+    {
+        isRerollingCardType = true;
+        latestRerolledCardType = "";
+
+        foreach (var ui in actionFaseUI)
+            ui.SetActive(false);
+
+        cardGameManager.HideScanUIPanel();
+        cardGameManager.HideCardInfoPanel();
+
+        if (fase34 == null)
+        {
+            Debug.LogError("fase34 belum di-assign di Inspector");
+            return;
+        }
+
+        fase34.SetActive(true);
+
+        if (applyrerolcard != null)
+        {
+            applyrerolcard.gameObject.SetActive(false);
+            applyrerolcard.onClick.RemoveAllListeners();
+            applyrerolcard.onClick.AddListener(ApplyRerollCardType);
+        }
+    }
+
+
+    public void SetLatestRerolledCardType(string type)
+    {
+        latestRerolledCardType = type;
+
+        // update UI teks hasil reroll
+        cardTypeRoller.cardTypeText.text = type;
+
+        applyrerolcard.gameObject.SetActive(true);
+    }
+    void ApplyRerollCardType()
+    {
+        if (string.IsNullOrEmpty(latestRerolledCardType))
+            return;
+
+        int curr = playerState.currentPlayerIndex;
+        playerState.players[curr].lastTypeCard = latestRerolledCardType;
+
+        isRerollingCardType = false;
+        fase34.SetActive(false);
+
+        EndActionAndReturnToLobby();
+    }
+
+
     //=====================================================
     // FASE SKIP
     //=====================================================
