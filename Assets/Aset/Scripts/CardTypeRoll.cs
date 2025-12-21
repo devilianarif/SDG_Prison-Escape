@@ -45,24 +45,47 @@ public class CardTypeRoll : MonoBehaviour
 
     void RandomType()
     {
+        int curr = gameManager.playerState.currentPlayerIndex;
+        var player = gameManager.playerState.players[curr];
+
+        // =========================
+        // FASE 2 → ROLL WAJIB
+        // =========================
+        if (!gameManager.isRerollingCardType)
+        {
+            DoRoll();
+            gameManager.playerState.SetTypeCard(lastType);
+            gameManager.SaveState();
+            gameManager.UpdateChecklist();
+            rolltypecard.interactable = false; // cuma boleh 1x
+            return;
+        }
+
+        // =========================
+        // REROLL
+        // =========================
+        if (player.rerollChanceLeft <= 0)
+        {
+            rolltypecard.interactable = false;
+            return;
+        }
+
+        player.rerollChanceLeft--;
+        DoRoll();
+
+        gameManager.SetLatestRerolledCardType(lastType);
+
+        if (player.rerollChanceLeft <= 0)
+            rolltypecard.interactable = false;
+    }
+
+    void DoRoll()
+    {
         int index = Random.Range(0, cardTypes.Length);
         lastType = cardTypes[index];
 
         cardTypeText.text = lastType;
         cardTypeText.color = GetColorByType(lastType);
-
-        // AUTO COMMIT SAAT REROLL
-        if (gameManager.isRerollingCardType)
-        {
-            gameManager.SetLatestRerolledCardType(lastType);
-            return;
-        }
-
-
-        // normal flow
-        gameManager.playerState.SetTypeCard(lastType);
-        gameManager.SaveState();
-        gameManager.UpdateChecklist();
     }
 
 

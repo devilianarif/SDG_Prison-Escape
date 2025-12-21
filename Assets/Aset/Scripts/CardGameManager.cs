@@ -429,30 +429,31 @@ public class CardGameManager : MonoBehaviour
             return;
 
         }
-
         if (lastScannedCard.isRerolcard)
         {
+            int extraReroll = 1; // dari kartu reroll saja
+
             var chara = gameManager
                 .cardGameManager
                 .database
                 .GetCharacter(ps.players[curr].characterIndex);
 
-            if (chara.bufrerolcard && player.charaBuffCooldown > 0)
+            // buff chara = tambah 1 reroll lagi
+            if (chara != null && chara.bufrerolcard && player.charaBuffCooldown <= 0)
             {
-                ShowNotif("Character ability is on cooldown");
-                return;
+                extraReroll += 1;
+                player.charaBuffCooldown = chara.coldoncharabuf;
             }
+
+            player.rerollChanceLeft = extraReroll;
 
             HideCardInfoPanel();
             HideScanUIPanel();
-
-            if (chara.bufrerolcard)
-                player.charaBuffCooldown = chara.coldoncharabuf;
-
-            ApplyCardCooldown(player); // ← WAJIB
+            ApplyCardCooldown(player);
             gameManager.OpenRerollCardPanel();
             return;
         }
+
 
 
 

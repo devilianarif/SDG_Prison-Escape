@@ -14,11 +14,14 @@ public class PlayerState : ScriptableObject
         public int health = 5; // health awal
         public int lastDiceResult; // hasil dadu terakhir
         public string lastTypeCard; // tipe kartu terakhir
+        public int rerollChanceLeft;
+
         public string lastScannedCardID; // ID kartu terakhir yang discan
 
         // ===== COOLDOWN =====
         public int cardCooldown;        // sisa cooldown kartu
         public int charaBuffCooldown;   // sisa cooldown buff karakter
+
     }
 
 
