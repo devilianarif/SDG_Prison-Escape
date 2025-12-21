@@ -11964,6 +11964,7 @@ MonoBehaviour:
   - {fileID: 1886675532}
   - {fileID: 689367151}
   actionFase32UI: {fileID: 1823617728}
+  matikanbackdanfasetbn: 1
   skipActionFaseTurnButton: {fileID: 920609787884127945}
   skipActionFaseTurnUI: {fileID: 1275572267}
   diceRoller: {fileID: 2873240787557951211}
@@ -15645,7 +15646,7 @@ Canvas:
   m_GameObject: {fileID: 3465478205831479049}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 6212148552911596224}
   m_PlaneDistance: 30
   m_PixelPerfect: 0

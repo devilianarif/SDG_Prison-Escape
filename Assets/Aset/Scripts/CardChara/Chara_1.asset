@@ -22,7 +22,7 @@ MonoBehaviour:
   health: 5
   buffname: 
   coldoncharabuf: 0
-  bufvdice: 1
+  bufvdice: 0
   valuedice: 2
   bufrerolcard: 0
   buffattack: 0
