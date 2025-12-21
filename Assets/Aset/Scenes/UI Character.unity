@@ -876,8 +876,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -904,14 +906,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -974,7 +976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &234695903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2562,8 +2564,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -2590,14 +2594,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4055,8 +4059,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -4083,14 +4089,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5142,8 +5148,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -5170,14 +5178,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6547,8 +6555,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -6575,14 +6585,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7897,8 +7907,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lihat 2 kartu teratas dari deck (bisa taroh di atas, bisa disisip tengah2
-    deck)
+  m_text: "HP awal 10. Memiliki buff dice yang menambah nilai dice sebesar 1. \r\nMemiliki
+    buff reroll card yang memberi 1 kesempatan reroll tambahan. \r\nBuff damage menambah
+    1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
+    2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
   m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
@@ -7925,14 +7937,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.5
+  m_fontSize: 18.7
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

@@ -68,8 +68,9 @@ public class CharacterButton : MonoBehaviour
         for (int i = 0; i < charaefektext.Length; i++)
         {
             if (i < characterData.Length)
-                charaefektext[i].text = characterData[i].efek;
+                charaefektext[i].text = BuildCharacterInfo(characterData[i]);
         }
+
     }
 
 
@@ -98,10 +99,10 @@ public class CharacterButton : MonoBehaviour
 
 
     public void SetActivePlayer(int p)
-{
-    currentPlayer = p;
-    RefreshInteractable();
-}
+    {
+        currentPlayer = p;
+        RefreshInteractable();
+    }
 
 
     void SelectCharacter(int charIndex)
@@ -129,7 +130,56 @@ public class CharacterButton : MonoBehaviour
         RefreshInteractable();
     }
 
+    public string BuildCharacterInfo(CardChara c)
+    {
+        if (c == null) return "";
 
+        // benar-benar tidak punya kemampuan
+        if (string.IsNullOrEmpty(c.buffname) && string.IsNullOrEmpty(c.efek))
+            return "Tidak memiliki kemampuan khusus";
+
+        string info = "";
+
+        // 1. Nama buff / kemampuan
+        if (!string.IsNullOrEmpty(c.buffname))
+            info += c.buffname;
+
+        // 2. Deskripsi efek utama
+        if (!string.IsNullOrEmpty(c.efek))
+        {
+            if (!string.IsNullOrEmpty(info))
+                info += " – ";
+
+            info += c.efek;
+        }
+
+        // 3. Nilai buff (dikumpulkan dalam kurung)
+        string valueInfo = "";
+
+        if (c.bufvdice)
+            valueInfo += $"Dice +{c.valuedice}, ";
+
+        if (c.buffattack)
+            valueInfo += $"Damage +{c.valuedamage}, ";
+
+        if (c.buffheal)
+            valueInfo += $"Heal S{c.valuehealdiri} / A{c.valueheallain}, ";
+
+        if (c.bufrerolcard)
+            valueInfo += "Reroll +1, ";
+
+        if (!string.IsNullOrEmpty(valueInfo))
+        {
+            valueInfo = valueInfo.TrimEnd(' ', ',');
+            info += $" ({valueInfo})";
+        }
+
+        // 4. Cooldown (pakai bracket biar kebaca jelas)
+        if (c.coldoncharabuf > 0)
+            info += $" [CD {c.coldoncharabuf}]";
+
+        return info.Trim();
+    }
 
     void LockCharacter(int charIndex, int playerIndex)
     {

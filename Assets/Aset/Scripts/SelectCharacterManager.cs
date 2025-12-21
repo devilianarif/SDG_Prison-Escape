@@ -7,6 +7,7 @@ public class SelectCharacterManager : MonoBehaviour
 {
     public PlayerState playerState;
     public CharacterButton characterButton;
+    
 
     public Button Nextbtn;
     public Button startgame;
@@ -121,7 +122,8 @@ public class SelectCharacterManager : MonoBehaviour
 
             playerroletext[i].text = data.role;
             playerabilityastext[i].text = data.ability_as;
-            playerefektext[i].text = data.efek;
+            playerefektext[i].text = characterButton.BuildCharacterInfo(data);
+
 
         }
 
