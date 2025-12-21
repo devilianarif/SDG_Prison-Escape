@@ -27,6 +27,6 @@ MonoBehaviour:
   bufrerolcard: 0
   buffattack: 0
   valuedamage: 1
-  buffheal: 0
+  buffheal: 1
   valuehealdiri: 2
   valueheallain: 1

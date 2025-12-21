@@ -458,7 +458,8 @@ public class CardGameManager : MonoBehaviour
 
 
 
-        int hpChange = GetHpChangeFromCard(lastScannedCard);
+        int hpChange = CalculateHpChange(lastScannedCard, curr, selectedTargetIndex);
+
         gameManager.ApplyCardEffectToPlayer(selectedTargetIndex, hpChange);
         ApplyCardCooldown(player);
 
@@ -613,6 +614,57 @@ public class CardGameManager : MonoBehaviour
             else
                 scannerCardSkip.preview.texture = null;
         }
+    }
+    int CalculateHpChange(
+        CardData card,
+        int casterIndex,
+        int targetIndex
+    )
+    {
+        var ps = gameManager.playerState;
+        var chara = database.GetCharacter(ps.players[casterIndex].characterIndex);
+
+        // =========================
+        // DAMAGE CARD
+        // =========================
+        if (card.attack > 0 && card.heal == 0)
+        {
+            int dmg = card.attack;
+
+            if (chara != null &&
+                chara.buffattack &&
+                ps.players[casterIndex].charaBuffCooldown <= 0)
+            {
+                dmg += Mathf.RoundToInt(chara.valuedamage);
+                ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
+            }
+
+            return dmg; // positif = damage
+        }
+
+        // =========================
+        // HEAL CARD
+        // =========================
+        if (card.attack == 0 && card.heal > 0)
+        {
+            int heal = card.heal;
+
+            if (chara != null &&
+                chara.buffheal &&
+                ps.players[casterIndex].charaBuffCooldown <= 0)
+            {
+                if (casterIndex == targetIndex)
+                    heal += Mathf.RoundToInt(chara.valuehealdiri);
+                else
+                    heal += Mathf.RoundToInt(chara.valueheallain);
+
+                ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
+            }
+
+            return -heal; // negatif = heal
+        }
+
+        return 0;
     }
 
 

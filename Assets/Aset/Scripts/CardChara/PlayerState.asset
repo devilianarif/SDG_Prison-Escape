@@ -47,20 +47,20 @@ MonoBehaviour:
   players:
   - characterIndex: 0
     playername: chara2
-    health: 5
-    lastDiceResult: 4
-    lastTypeCard: Bad
+    health: 4
+    lastDiceResult: 2
+    lastTypeCard: Lucky
     rerollChanceLeft: 0
     lastScannedCardID: Card_B1
     cardCooldown: 0
     charaBuffCooldown: 0
-  - characterIndex: 4
+  - characterIndex: 2
     playername: chara4
     health: 4
-    lastDiceResult: 2
-    lastTypeCard: Bad
+    lastDiceResult: 0
+    lastTypeCard: 
     rerollChanceLeft: 0
-    lastScannedCardID: Card_B1
+    lastScannedCardID: 
     cardCooldown: 0
     charaBuffCooldown: 0
   - characterIndex: 2
