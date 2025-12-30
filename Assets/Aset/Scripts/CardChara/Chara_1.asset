@@ -15,18 +15,17 @@ MonoBehaviour:
   id: Chara_1
   role: 'Strategist '
   ability_as: Explore / Controller
-  efek: View the top 2 cards of the deck. You may return them to the top or insert
-    them anywhere in the middle of the deck.
+  efek: Reroll cards, gain +1 additional reroll.
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
   karakter: {fileID: 5712867871659811231, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
-  buffname: nama buf
-  coldoncharabuf: 2
-  bufvdice: 1
-  valuedice: 2
+  buffname: Strategist
+  coldoncharabuf: 1
+  bufvdice: 0
+  valuedice: 0
   bufrerolcard: 1
-  buffattack: 1
-  valuedamage: 1
-  buffheal: 1
-  valuehealdiri: 2
-  valueheallain: 1
+  buffattack: 0
+  valuedamage: 0
+  buffheal: 0
+  valuehealdiri: 0
+  valueheallain: 0

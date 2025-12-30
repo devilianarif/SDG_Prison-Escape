@@ -15,8 +15,17 @@ MonoBehaviour:
   id: Chara_4
   role: Con Artist
   ability_as: Distract / Controller
-  efek: 'Push an enemy player back 2 tiles OR pull an ally forward 2 tiles (Cooldown:
-    2 rounds)'
+  efek: Attack cards deal +1 additional damage.
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
   karakter: {fileID: 4107306500420543721, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
+  buffname: Con Artist
+  coldoncharabuf: 2
+  bufvdice: 0
+  valuedice: 0
+  bufrerolcard: 0
+  buffattack: 1
+  valuedamage: 1
+  buffheal: 0
+  valuehealdiri: 0
+  valueheallain: 0
