@@ -122,13 +122,14 @@ public class policeManager : MonoBehaviour
         if (playerState.polices[0].isWheel)
             yield return new WaitUntil(() => wheel2DRoller.snapDone);
 
-        string diceOnly =
-            "P1 (" + diceRoller[0].lastResult + ") - " +
-            "P2 (" + diceRoller[1].lastResult + ") - " +
-            "P3 (" + diceRoller[2].lastResult + ") - " +
-            "P4 (" + diceRoller[3].lastResult + ") ";
+       string diceOnly =
+    "Police 1 (" + diceRoller[0].lastResult + ")\n" +
+    "Police 2 (" + diceRoller[1].lastResult + ")\n" +
+    "Police 3 (" + diceRoller[2].lastResult + ")\n" +
+    "Police 4 (" + diceRoller[3].lastResult + ")";
 
-        valueText.text = diceOnly;
+valueText.text = diceOnly;
+
 
         applyToLobyButton.interactable = true;
 

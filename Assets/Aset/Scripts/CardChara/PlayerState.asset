@@ -12,26 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2bf1ca6382c04f83dcc7a8e95fb18, type: 3}
   m_Name: PlayerState
   m_EditorClassIdentifier: Assembly-CSharp::PlayerState
-  selectedCharacter: 03000000040000000200000000000000
+  selectedCharacter: 00000000030000000100000002000000
   hasBackstep: 0
   backup:
   - health: 5
     lastDiceResult: 0
     lastTypeCard: 
     lastScannedCardID: 
-  - health: 4
-    lastDiceResult: 1
-    lastTypeCard: Lucky
-    lastScannedCardID: Card_B1
-  - health: 0
+  - health: 5
     lastDiceResult: 0
     lastTypeCard: 
     lastScannedCardID: 
-  - health: 4
+  - health: 5
+    lastDiceResult: 0
+    lastTypeCard: 
+    lastScannedCardID: 
+  - health: 5
     lastDiceResult: 0
     lastTypeCard: 
     lastScannedCardID: 
   polices:
+  - lastDiceResult: 2
+    laststepwhellValue: 
+    isWheel: 0
   - lastDiceResult: 6
     laststepwhellValue: 
     isWheel: 0
@@ -41,31 +44,10 @@ MonoBehaviour:
   - lastDiceResult: 1
     laststepwhellValue: 
     isWheel: 0
-  - lastDiceResult: 6
-    laststepwhellValue: 
-    isWheel: 0
   players:
   - characterIndex: 0
-    playername: chara2
-    health: 4
-    lastDiceResult: 2
-    lastTypeCard: Lucky
-    rerollChanceLeft: 0
-    lastScannedCardID: Card_B1
-    cardCooldown: 0
-    charaBuffCooldown: 0
-  - characterIndex: 2
-    playername: chara4
-    health: 4
-    lastDiceResult: 0
-    lastTypeCard: 
-    rerollChanceLeft: 0
-    lastScannedCardID: 
-    cardCooldown: 0
-    charaBuffCooldown: 0
-  - characterIndex: 2
-    playername: chara5
-    health: 0
+    playername: 'Strategist '
+    health: 2
     lastDiceResult: 0
     lastTypeCard: 
     rerollChanceLeft: 0
@@ -73,13 +55,31 @@ MonoBehaviour:
     cardCooldown: 0
     charaBuffCooldown: 0
   - characterIndex: 3
-    playername: chara1
-    health: 4
+    playername: Con Artist
+    health: 0
+    lastDiceResult: 2
+    lastTypeCard: Skill
+    rerollChanceLeft: 0
+    lastScannedCardID: Card_B1
+    cardCooldown: 0
+    charaBuffCooldown: 0
+  - characterIndex: 1
+    playername: Locksmith
+    health: 5
     lastDiceResult: 0
     lastTypeCard: 
     rerollChanceLeft: 0
     lastScannedCardID: 
     cardCooldown: 0
     charaBuffCooldown: 0
-  currentTurn: 5
-  currentPlayerIndex: 1
+  - characterIndex: 2
+    playername: Hacker
+    health: 5
+    lastDiceResult: 1
+    lastTypeCard: Lucky
+    rerollChanceLeft: 0
+    lastScannedCardID: Card_B1
+    cardCooldown: 0
+    charaBuffCooldown: 0
+  currentTurn: 6
+  currentPlayerIndex: 2

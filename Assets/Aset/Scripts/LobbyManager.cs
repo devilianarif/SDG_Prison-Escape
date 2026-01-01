@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 
+
 public class LobbyManager : MonoBehaviour
 {
     [Header("Character Data")]
@@ -29,6 +30,9 @@ public class LobbyManager : MonoBehaviour
     public TMP_Text[] turnInfoText;
     public Button[] backStepTurnButton;
     public Button[] resetAllTurnsButton;
+    public Button Backreset;
+    public GameObject ResetUI;
+    public Button SureReset;
 
     [Header("Police UI Elements")]
     public Button policeActionButton;
@@ -36,18 +40,18 @@ public class LobbyManager : MonoBehaviour
 
 
 
-    //------------------------------------------
-    void Start()
-    {
-        if (playerState.backup[0] == null)
-            playerState.ResetPlayerData(); // paksa  jika belum
-        GetPlayerSelected();
-        faseTurn();
-        btnklik();
-        UpdateHealthUI();
-        playerMatiUI();
 
-    }
+    //------------------------------------------
+   void Start()
+{
+    GetPlayerSelected();
+    faseTurn();
+    btnklik();
+    UpdateHealthUI();
+    playerMatiUI();
+    ResetUI.SetActive(false);
+}
+
     void btnklik()
     {
         for (int i = 0; i < backStepTurnButton.Length; i++)
@@ -66,11 +70,28 @@ public class LobbyManager : MonoBehaviour
         policeActionButton.onClick.AddListener(() => actionPerTurnPolice());
         for (int i = 0; i < resetAllTurnsButton.Length; i++)
         {
-            resetAllTurnsButton[i].onClick.AddListener(() => resetTurn());
+            resetAllTurnsButton[i].onClick.AddListener(() => OpenResetUI());
         }
+
+        Backreset.onClick.AddListener(() => CloseResetUI());
+
+SureReset.onClick.AddListener(() =>
+{
+    ResetUI.SetActive(false);
+    resetTurn();
+});
+
 
 
     }
+public void OpenResetUI()
+{
+    ResetUI.SetActive(true);
+}
+public void CloseResetUI()
+{
+    ResetUI.SetActive(false);
+}
 
     public void resetTurn()
     {
@@ -211,17 +232,22 @@ public class LobbyManager : MonoBehaviour
     }
 
 
-    public void UpdateHealthUI()
+  public void UpdateHealthUI()
+{
+    for (int i = 0; i < 4; i++)
     {
-        for (int i = 0; i < 4; i++)
-        {
-            int hp = playerState.players[i].health;
-            int maxHP = 5;
+        int hp = playerState.players[i].health;
+        int maxHP = 5;
 
-            playerHealthText[i].text = hp + " / " + maxHP;
-            playerHealthBarFill[i].fillAmount = (float)hp / maxHP;
-        }
+        hp = Mathf.Clamp(hp, 0, maxHP);
+
+        playerHealthText[i].text = hp + " / " + maxHP;
+
+        float fill = Mathf.Clamp01((float)hp / maxHP);
+        playerHealthBarFill[i].fillAmount = fill;
     }
+}
+
 
     public void playerMatiUI()
     {
@@ -230,11 +256,12 @@ public class LobbyManager : MonoBehaviour
         {
             int hp = playerState.players[i].health;
 
-            if (hp <= 0)
-            {
-                playerMatiImage[i].gameObject.SetActive(true);
-                playerMatiText[i].text = "P" + (i + 1) + " eliminated";
-            }
+           if (hp <= 0)
+{
+    playerHealthBarFill[i].fillAmount = 0f;
+    playerMatiImage[i].gameObject.SetActive(true);
+    playerMatiText[i].text = "P" + (i + 1) + " eliminated";
+}
             else
             {
                 playerMatiImage[i].gameObject.SetActive(false);

@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     [Header("Skip Action Fase")]
     public Button skipActionFaseTurnButton;
     public GameObject skipActionFaseTurnUI;
+    bool isInSkipFase = false;
+
 
     [Header("Fase 1 - Roll Dice")]
     public DiceRoller diceRoller;
@@ -169,16 +171,27 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < actionFaseButtons.Length; i++)
         {
             int idx = i;
-            actionFaseButtons[i].onClick.AddListener(() =>
-            {
-                currentFase = idx;
-                ActionFaseUI();
-                SaveState();
-            });
+  actionFaseButtons[i].onClick.AddListener(() =>
+{
+    if (!isInSkipFase)
+        return;
+
+    // === KONSUMSI MODE SKIP ===
+    isInSkipFase = false;
+    UpdateFaseButtonsLock();
+
+    currentFase = idx;
+    ActionFaseUI();
+    SaveState();
+});
+
+
         }
 
         nextFaseButton.onClick.AddListener(() =>
         {
+                isInSkipFase = false; // <<< reset di sini
+
             currentFase++;
             if (currentFase >= totalFase)
                 currentFase = totalFase - 1;
@@ -204,8 +217,9 @@ public class GameManager : MonoBehaviour
     }
     void UpdateFaseButtonsLock()
     {
-        foreach (var btn in actionFaseButtons)
-            btn.interactable = !matikanbackdanfasetbn;
+        
+             foreach (var btn in actionFaseButtons)
+        btn.interactable = isInSkipFase;
     }
     void UpdateNextButtonState()
 {
@@ -240,8 +254,7 @@ public class GameManager : MonoBehaviour
     // SWITCH UI FASE
 
     public void ActionFaseUI()
-    {
-        // ==== FORCE CLOSE PANEL REROLL ====
+    {   // ==== FORCE CLOSE PANEL REROLL ====
         if (fase34 != null)
             fase34.SetActive(false);
 
@@ -570,7 +583,9 @@ public class GameManager : MonoBehaviour
     // FASE SKIP
     //=====================================================
     public void SkipActionFaseTurn()
-    {
+    {isInSkipFase = true;
+UpdateFaseButtonsLock();
+
         hidedice3dui();
         cardGameManager.ResetScannerState();
         if (mainCanvas)
