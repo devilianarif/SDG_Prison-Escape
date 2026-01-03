@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerState : ScriptableObject
 {
     public int[] selectedCharacter = new int[4];
+    public string[] playerNames = new string[4];
 
     public bool hasBackstep;
     [System.Serializable]
@@ -75,36 +76,65 @@ public class PlayerState : ScriptableObject
         return currentPlayerIndex >= 0 && currentPlayerIndex <= 3;
     }
 
-    public void ResetPlayerData()
+   public void ResetPlayerData()
+{
+    // jaga data identitas dulu
+    string[] cachedNames = new string[4];
+    int[] cachedCharacters = new int[4];
+
+    for (int i = 0; i < 4; i++)
     {
-        if (players == null || players.Length != 4)
+        if (players != null && players.Length > i && players[i] != null)
         {
-            players = new PlayerData[4];
+            cachedNames[i] = players[i].playername;
+            cachedCharacters[i] = players[i].characterIndex;
         }
-
-        for (int i = 0; i < players.Length; i++)
+        else
         {
-            players[i] = new PlayerData();
-            players[i].characterIndex = selectedCharacter[i];
-            players[i].health = 5;
-            players[i].lastDiceResult = 0;
-            players[i].lastTypeCard = string.Empty;
-            players[i].lastScannedCardID = string.Empty;
+            cachedNames[i] = "";
+            cachedCharacters[i] = selectedCharacter[i];
         }
-
-        currentTurn = 1;
-        currentPlayerIndex = 0;
-        for (int i = 0; i < 4; i++)
-        {
-            backup[i] = new PlayerBackup();
-            backup[i].CopyFrom(players[i]);
-        }
-        for (int i = 0; i < polices.Length; i++)
-            polices[i] = new PoliceData();
-
     }
 
+    // pastikan array ada
+    players = new PlayerData[4];
 
+    for (int i = 0; i < 4; i++)
+    {
+        players[i] = new PlayerData();
+
+        // === IDENTITAS (JANGAN HILANG) ===
+        players[i].playername = cachedNames[i];
+        players[i].characterIndex = cachedCharacters[i];
+
+        // === STATE GAMEPLAY (RESET) ===
+        players[i].health = 5;
+        players[i].lastDiceResult = 0;
+        players[i].lastTypeCard = "";
+        players[i].lastScannedCardID = "";
+        players[i].cardCooldown = 0;
+        players[i].charaBuffCooldown = 0;
+        players[i].rerollChanceLeft = 0;
+    }
+
+    // reset turn system
+    currentTurn = 1;
+    currentPlayerIndex = 0;
+    hasBackstep = false;
+
+    // reset backup
+    for (int i = 0; i < 4; i++)
+    {
+        if (backup[i] == null)
+            backup[i] = new PlayerBackup();
+
+        backup[i].CopyFrom(players[i]);
+    }
+
+    // reset police
+    for (int i = 0; i < polices.Length; i++)
+        polices[i] = new PoliceData();
+}
 
 
     public void NextPlayer()

@@ -16,11 +16,13 @@ MonoBehaviour:
   cardType: 1
   nama: No Time To Die
   attack: 0
-  heal: 0
+  heal: 3
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 103165441833447384, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: "\u201CHe\u2019s gone\u2026 or so the guards thought.\u201D"
   efekkartu: Go back to the board with 3 HP
+  cooldownroundcard: 0
   isSkipCard: 0
   isEfekReDice: 0
-  isRelifePlayer: 1
+  isRelifePlayer: 0
+  isRerolcard: 0
