@@ -15,7 +15,7 @@ MonoBehaviour:
   id: Card_B1
   cardType: 0
   nama: Shank Attack
-  attack: 0
+  attack: 1
   heal: 0
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: -7555129194424326377, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
