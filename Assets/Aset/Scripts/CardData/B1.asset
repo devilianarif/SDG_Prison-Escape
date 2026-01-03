@@ -24,6 +24,6 @@ MonoBehaviour:
   efekkartu: -1 health
   cooldownroundcard: 0
   isSkipCard: 0
-  isEfekReDice: 1
+  isEfekReDice: 0
   isRelifePlayer: 0
   isRerolcard: 0
