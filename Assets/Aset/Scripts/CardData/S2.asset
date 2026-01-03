@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   id: Card_S2
   cardType: 2
-  nama: Survival Instict
+  nama: Second Chance
   attack: 0
-  heal: 1
+  heal: 0
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
-  karakter: {fileID: -5869105994782232597, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
-  informasi: "You reach behind a neglected emergency locker. Bandages, antiseptic,
-    gauze\u2014exactly what you needed."
-  efekkartu: +1 health
+  karakter: {fileID: 21300000, guid: 057fc15811698224880a93ffef0da1c4, type: 3}
+  informasi: Discard this card, then draw 1 new card.
+  efekkartu: Reroll Card
+  cooldownroundcard: 0
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0
+  isRerolcard: 1
