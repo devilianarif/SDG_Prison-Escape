@@ -25,5 +25,5 @@ MonoBehaviour:
   cooldownroundcard: 0
   isSkipCard: 0
   isEfekReDice: 0
-  isRelifePlayer: 0
+  isRelifePlayer: 1
   isRerolcard: 0

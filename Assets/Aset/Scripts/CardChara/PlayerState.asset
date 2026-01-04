@@ -50,13 +50,13 @@ MonoBehaviour:
     laststepwhellValue: 
     isWheel: 0
   players:
-  - characterIndex: 3
+  - characterIndex: 0
     playername: 'Strategist '
     health: 5
-    lastDiceResult: 2
-    lastTypeCard: Lucky
+    lastDiceResult: 0
+    lastTypeCard: 
     rerollChanceLeft: 0
-    lastScannedCardID: Card_L1
+    lastScannedCardID: 
     cardCooldown: 0
     charaBuffCooldown: 0
   - characterIndex: 5
@@ -68,7 +68,7 @@ MonoBehaviour:
     lastScannedCardID: 
     cardCooldown: 0
     charaBuffCooldown: 0
-  - characterIndex: 0
+  - characterIndex: 3
     playername: Con Artist
     health: 5
     lastDiceResult: 0
@@ -87,4 +87,4 @@ MonoBehaviour:
     cardCooldown: 0
     charaBuffCooldown: 0
   currentTurn: 1
-  currentPlayerIndex: 1
+  currentPlayerIndex: 0
