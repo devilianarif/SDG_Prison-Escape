@@ -1,13 +1,12 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SelectCharacterManager : MonoBehaviour
 {
     public PlayerState playerState;
     public CharacterButton characterButton;
-    
 
     public Button Nextbtn;
     public Button startgame;
@@ -21,7 +20,6 @@ public class SelectCharacterManager : MonoBehaviour
     public TMP_Text[] playerroletext;
     public TMP_Text[] playerabilityastext;
     public TMP_Text[] playerefektext;
-
 
     public Sprite spriteNormal;
     public Sprite spriteActive;
@@ -105,39 +103,40 @@ public class SelectCharacterManager : MonoBehaviour
     // UI ACC
     void OpenACC()
     {
+        if (!isAllReady)
+            return;
 
-        if (!isAllReady) return;
-
+        // 1. simpan hasil pilihan
         for (int i = 0; i < 4; i++)
             playerState.selectedCharacter[i] = finalCharacterForPlayer[i];
 
-        playerState.ResetPlayerData();  // penting
+        // 2. reset state gameplay
+        playerState.ResetPlayerData();
 
+        // 3. inject ulang character ke PlayerData
         for (int i = 0; i < 4; i++)
         {
             int idx = finalCharacterForPlayer[i];
             CardChara data = characterButton.characterData[idx];
 
+            playerState.players[i].characterIndex = idx;
             playerState.players[i].playername = data.role;
 
             playerroletext[i].text = data.role;
             playerabilityastext[i].text = data.ability_as;
             playerefektext[i].text = characterButton.BuildCharacterInfo(data);
-
-
         }
-
 
         FillACC();
         panelACC.SetActive(true);
     }
-
 
     void CloseACC()
     {
         panelACC.SetActive(false);
         SetStartNormalVisual();
     }
+
     void FillACC()
     {
         for (int i = 0; i < 4; i++)
@@ -152,10 +151,8 @@ public class SelectCharacterManager : MonoBehaviour
         }
     }
 
-
     void LoadSceneNow()
     {
         SceneManager.LoadScene(scene);
     }
-
 }

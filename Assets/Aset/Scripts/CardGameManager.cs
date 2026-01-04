@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using System;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class CardGameManager : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class CardGameManager : MonoBehaviour
     public QRScannerCard scannerCardType;
     public QRScannerSkip scannerCardSkip;
     public CardDatabase database;
+
     [Header("UI kartu")]
     public Button ScanKartuButton;
     public TMP_Text notif;
@@ -19,9 +20,11 @@ public class CardGameManager : MonoBehaviour
     public string lastCardID;
     private bool isScanningCardType = false;
     private bool isScanningCardSkip = false;
+
     [Header("set kartu")]
     public GameObject cardInfoPanel;
     public GameObject scanUIPanel;
+
     [Header("data kartu")]
     public Image cardbg;
     public Image carddisplay;
@@ -29,6 +32,7 @@ public class CardGameManager : MonoBehaviour
     public TMP_Text cardjenis;
     public TMP_Text cardnamedetail;
     public TMP_Text cardInfodetail;
+
     [Header("player kartu")]
     public Button actionCard;
     public Button[] cardPlayerButton;
@@ -50,6 +54,7 @@ public class CardGameManager : MonoBehaviour
     public Action OnScanStarted;
     public Action OnCardInfoShown;
     public Action OnCardApplied;
+
     [Header("Scan Rules")]
     public bool useScanByType = false;
 
@@ -70,9 +75,11 @@ public class CardGameManager : MonoBehaviour
         if (notif != null)
             notif.gameObject.SetActive(false);
     }
+
     void ShowNotif(string message, float duration = 2f)
     {
-        if (notif == null) return;
+        if (notif == null)
+            return;
 
         notif.text = message;
         notif.gameObject.SetActive(true);
@@ -91,7 +98,8 @@ public class CardGameManager : MonoBehaviour
 
     void StartScanningCardType()
     {
-        if (isScanningCardType) return;
+        if (isScanningCardType)
+            return;
 
         isScanningCardType = true;
         isScanningCardSkip = false;
@@ -104,7 +112,8 @@ public class CardGameManager : MonoBehaviour
 
     void StartScanningCardSkip()
     {
-        if (isScanningCardSkip) return;
+        if (isScanningCardSkip)
+            return;
 
         isScanningCardSkip = true;
         isScanningCardType = false;
@@ -115,16 +124,18 @@ public class CardGameManager : MonoBehaviour
 
     void HandleQR(string id)
     {
-
         lastCardID = id;
-        if (!isScanningCardType) return;
+        if (!isScanningCardType)
+            return;
 
         var card = database.GetCard(id);
-        if (card == null) return;
+        if (card == null)
+            return;
 
-        //  VALIDASI TIPE KARTU BERDASARKAN GACHA 
+        //  VALIDASI TIPE KARTU BERDASARKAN GACHA
         // ambil type hasil gacha player aktif
-        string gachaType = gameManager.playerState
+        string gachaType = gameManager
+            .playerState
             .players[gameManager.playerState.currentPlayerIndex]
             .lastTypeCard;
 
@@ -138,27 +149,23 @@ public class CardGameManager : MonoBehaviour
                 return;
             }
 
-
             // skip card selalu lolos
             if (!card.isSkipCard && card.cardType.ToString() != gachaType)
             {
                 ShowNotif("This card type does not match your roll.");
                 return;
             }
-
-
         }
 
-
         lastScannedCard = card;
-        //  TOLAK SKIP CARD DI SCANNER KARTU  
-        if (card.isSkipCard)  // :contentReference[oaicite:0]{index=0}
+        //  TOLAK SKIP CARD DI SCANNER KARTU
+        if (card.isSkipCard) // :contentReference[oaicite:0]{index=0}
         {
             scannerCardType.StopCamera();
             isScanningCardType = false;
 
             ResetScannerState();
-            gameManager.SkipActionFaseTurn();  // langsung masuk ke fase skip
+            gameManager.SkipActionFaseTurn(); // langsung masuk ke fase skip
             return;
         }
         gameManager.playerState.SetScannedCardID(id);
@@ -172,13 +179,16 @@ public class CardGameManager : MonoBehaviour
         scannerCardType.StopCamera();
         isScanningCardType = false;
     }
+
     void HandleSkipQR(string id)
     {
         lastCardID = id;
-        if (!isScanningCardSkip) return;
+        if (!isScanningCardSkip)
+            return;
 
         var card = database.GetCard(id);
-        if (card == null) return;
+        if (card == null)
+            return;
 
         // jangan simpan scanned ID untuk skip
         lastScannedCard = card;
@@ -198,9 +208,8 @@ public class CardGameManager : MonoBehaviour
 
         scannerCardSkip.StopCamera();
         isScanningCardSkip = false;
-
-
     }
+
     void PerformSkipAction(CardData card)
     {
         gameManager.EndActionAndReturnToLobby();
@@ -229,11 +238,19 @@ public class CardGameManager : MonoBehaviour
                 break;
         }
 
-
-        cardInfodetail.text = "Attack : " + card.attack + "  Heal : " + card.heal + "\nInformation : " + card.informasi + "\nEffect : " + card.efekkartu;
+        cardInfodetail.text =
+            "Attack : "
+            + card.attack
+            + "  Heal : "
+            + card.heal
+            + "\nInformation : "
+            + card.informasi
+            + "\nEffect : "
+            + card.efekkartu;
 
         ShowCardInfoPanel();
     }
+
     Color HexToColor(string hex)
     {
         Color c;
@@ -254,7 +271,6 @@ public class CardGameManager : MonoBehaviour
 
     public void showdataplayer()
     {
-
         var ps = gameManager.playerState;
 
         for (int i = 0; i < 4; i++)
@@ -273,15 +289,12 @@ public class CardGameManager : MonoBehaviour
                 matiPlayer[i].SetActive(isDead);
 
             if (i < matiPlayertext.Length)
-                matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " is imprisoned"
-                    : "";
+                matiPlayertext[i].text = isDead ? "Player " + (i + 1) + " is imprisoned" : "";
 
             Debug.Log("P3 Current HP : " + gameManager.playerState.players[2].health);
         }
-
-
     }
+
     public void ShowCharacterDisplay()
     {
         var ps = gameManager.playerState;
@@ -291,7 +304,8 @@ public class CardGameManager : MonoBehaviour
             int idx = ps.players[i].characterIndex;
 
             CardChara data = database.GetCharacter(idx);
-            if (data == null) continue;
+            if (data == null)
+                continue;
 
             if (i < cardplayer.Length)
                 cardplayer[i].sprite = data.cardfull;
@@ -301,7 +315,6 @@ public class CardGameManager : MonoBehaviour
         }
     }
 
-
     public void HideCardInfoPanel()
     {
         cardInfoPanel.SetActive(false);
@@ -309,7 +322,8 @@ public class CardGameManager : MonoBehaviour
 
     public void ActionCardData()
     {
-        if (lastScannedCard == null) return;
+        if (lastScannedCard == null)
+            return;
 
         var ps = gameManager.playerState;
         selectedTargetIndex = -1;
@@ -330,9 +344,7 @@ public class CardGameManager : MonoBehaviour
                 matiPlayer[i].SetActive(isDead);
 
             if (i < matiPlayertext.Length)
-                matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " is imprisoned"
-                    : "";
+                matiPlayertext[i].text = isDead ? "Player " + (i + 1) + " is imprisoned" : "";
 
             RectTransform rt = cardPlayerButton[i].GetComponent<RectTransform>();
             rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, defaultplayerY);
@@ -365,9 +377,8 @@ public class CardGameManager : MonoBehaviour
         actionCard.onClick.AddListener(ApplyCardToSelectedPlayer);
 
         HighlightCurrentTurn();
-
-
     }
+
     void SelectPlayerTarget(int index)
     {
         selectedTargetIndex = index;
@@ -381,6 +392,7 @@ public class CardGameManager : MonoBehaviour
             rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, y);
         }
     }
+
     void ApplyCardToSelectedPlayer()
     {
         if (!gameManager.IsAllChecklistOK())
@@ -394,16 +406,14 @@ public class CardGameManager : MonoBehaviour
         var player = gameManager.playerState.players[curr];
 
         // ===== CEK COOLDOWN KARTU =====
-        if (lastScannedCard.cooldownroundcard > 0 &&
-            player.cardCooldown > 0)
+        if (lastScannedCard.cooldownroundcard > 0 && player.cardCooldown > 0)
         {
             ShowNotif("Card is on cooldown");
             return;
         }
 
         // target mati normal → batal
-        if (ps.players[selectedTargetIndex].health <= 0 &&
-            !lastScannedCard.isRelifePlayer)
+        if (ps.players[selectedTargetIndex].health <= 0 && !lastScannedCard.isRelifePlayer)
             return;
 
         // KHUSUS RELIFE
@@ -416,7 +426,6 @@ public class CardGameManager : MonoBehaviour
             ApplyCardCooldown(player);
             gameManager.EndActionAndReturnToLobby();
 
-
             OnCardApplied?.Invoke();
             return;
         }
@@ -427,16 +436,14 @@ public class CardGameManager : MonoBehaviour
             HideScanUIPanel();
             gameManager.OpenReDicePanel();
             return;
-
         }
         if (lastScannedCard.isRerolcard)
         {
             int extraReroll = 1; // dari kartu reroll saja
 
-            var chara = gameManager
-                .cardGameManager
-                .database
-                .GetCharacter(ps.players[curr].characterIndex);
+            var chara = gameManager.cardGameManager.database.GetCharacter(
+                ps.players[curr].characterIndex
+            );
 
             // buff chara = tambah 1 reroll lagi
             if (chara != null && chara.bufrerolcard && player.charaBuffCooldown <= 0)
@@ -454,24 +461,18 @@ public class CardGameManager : MonoBehaviour
             return;
         }
 
-
-
-
-
         int hpChange = CalculateHpChange(lastScannedCard, curr, selectedTargetIndex);
 
         gameManager.ApplyCardEffectToPlayer(selectedTargetIndex, hpChange);
         ApplyCardCooldown(player);
-
 
         BtnPlayerHide();
         HideCardInfoPanel();
 
         gameManager.EndActionAndReturnToLobby();
         OnCardApplied?.Invoke();
-
-
     }
+
     public CardData GetLastScannedCard()
     {
         return lastScannedCard;
@@ -504,6 +505,7 @@ public class CardGameManager : MonoBehaviour
 
         return 0;
     }
+
     public void ShowScanUIPanel()
     {
         scanUIPanel.SetActive(true);
@@ -529,9 +531,7 @@ public class CardGameManager : MonoBehaviour
                 matiPlayer[i].SetActive(isDead);
 
             if (i < matiPlayertext.Length)
-                matiPlayertext[i].text = isDead
-                    ? "Player " + (i + 1) + " is imprisoned"
-                    : "";
+                matiPlayertext[i].text = isDead ? "Player " + (i + 1) + " is imprisoned" : "";
 
             RectTransform rt = cardPlayerButton[i].GetComponent<RectTransform>();
 
@@ -540,8 +540,6 @@ public class CardGameManager : MonoBehaviour
         }
 
         HighlightCurrentTurn();
-
-
     }
 
     public void HighlightCurrentTurn()
@@ -563,10 +561,7 @@ public class CardGameManager : MonoBehaviour
 
         // kalau player turn hidup → langsung set target
         selectedTargetIndex = dead ? -1 : curr;
-
-
     }
-
 
     public void HideScanUIPanel()
     {
@@ -615,25 +610,30 @@ public class CardGameManager : MonoBehaviour
                 scannerCardSkip.preview.texture = null;
         }
     }
-    int CalculateHpChange(
-        CardData card,
-        int casterIndex,
-        int targetIndex
-    )
+
+    int CalculateHpChange(CardData card, int casterIndex, int targetIndex)
     {
         var ps = gameManager.playerState;
-        var chara = database.GetCharacter(ps.players[casterIndex].characterIndex);
+
+        int charIndex = ps.players[casterIndex].characterIndex;
+        var chara = database.GetCharacter(charIndex);
 
         // =========================
         // DAMAGE CARD
         // =========================
         if (card.attack > 0 && card.heal == 0)
         {
-            int dmg = card.attack;
+            int dmg = card.attack; // DAMAGE DASAR = NILAI KARTU
 
-            if (chara != null &&
-                chara.buffattack &&
-                ps.players[casterIndex].charaBuffCooldown <= 0)
+            // === BUFF ATTACK KHUSUS CHARACTER ===
+            if (
+                chara != null
+                && chara.buffattack
+                && // memang punya buff
+                chara.valuedamage > 0
+                && // buff valid
+                ps.players[casterIndex].charaBuffCooldown <= 0
+            )
             {
                 dmg += Mathf.RoundToInt(chara.valuedamage);
                 ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
@@ -647,11 +647,9 @@ public class CardGameManager : MonoBehaviour
         // =========================
         if (card.attack == 0 && card.heal > 0)
         {
-            int heal = card.heal;
+            int heal = card.heal; // HEAL DASAR = NILAI KARTU
 
-            if (chara != null &&
-                chara.buffheal &&
-                ps.players[casterIndex].charaBuffCooldown <= 0)
+            if (chara != null && chara.buffheal && ps.players[casterIndex].charaBuffCooldown <= 0)
             {
                 if (casterIndex == targetIndex)
                     heal += Mathf.RoundToInt(chara.valuehealdiri);
@@ -666,6 +664,4 @@ public class CardGameManager : MonoBehaviour
 
         return 0;
     }
-
-
 }
