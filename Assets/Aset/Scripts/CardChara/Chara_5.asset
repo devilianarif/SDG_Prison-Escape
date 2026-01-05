@@ -21,7 +21,7 @@ MonoBehaviour:
   karakter: {fileID: -7130844508404820948, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
   buffname: Medic
-  coldoncharabuf: 4
+  coldoncharabuf: 5
   bufvdice: 0
   valuedice: 0
   bufrerolcard: 0

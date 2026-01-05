@@ -20,7 +20,7 @@ MonoBehaviour:
   karakter: {fileID: 4107306500420543721, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
   buffname: Con Artist
-  coldoncharabuf: 2
+  coldoncharabuf: 3
   bufvdice: 0
   valuedice: 0
   bufrerolcard: 0
