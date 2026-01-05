@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SplashManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class SplashManager : MonoBehaviour
     void Start()
     {
         panelCredit.SetActive(false);
+
+        RequestCameraPermission();
 
         btnStart.onClick.AddListener(StartGame);
         btnCredit.onClick.AddListener(OpenCredit);
@@ -36,5 +39,13 @@ public class SplashManager : MonoBehaviour
         panelCredit.SetActive(false);
     }
 
-
+    void RequestCameraPermission()
+    {
+#if UNITY_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
+        {
+            Permission.RequestUserPermission(Permission.Camera);
+        }
+#endif
+    }
 }

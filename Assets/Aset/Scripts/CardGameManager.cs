@@ -454,7 +454,6 @@ public class CardGameManager : MonoBehaviour
             {
                 extraReroll += 1;
                 player.charaBuffCooldown = chara.coldoncharabuf;
-                player.buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             player.rerollChanceLeft = extraReroll;
@@ -640,7 +639,6 @@ public class CardGameManager : MonoBehaviour
             {
                 dmg += Mathf.RoundToInt(chara.valuedamage);
                 ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
-                ps.players[casterIndex].buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             return dmg; // positif = damage
@@ -665,7 +663,6 @@ public class CardGameManager : MonoBehaviour
                     heal += Mathf.RoundToInt(chara.valueheallain);
 
                 ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
-                ps.players[casterIndex].buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             return -heal; // negatif = heal

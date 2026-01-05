@@ -487,7 +487,6 @@ public class GameManager : MonoBehaviour
             finalDice += Mathf.RoundToInt(chara.valuedice);
             buffActive = true;
             playerState.players[curr].charaBuffCooldown = chara.coldoncharabuf;
-            playerState.players[curr].buffStartTurn = playerState.currentTurn;
         }
 
         playerState.players[curr].lastDiceResult = finalDice;
@@ -507,6 +506,7 @@ public class GameManager : MonoBehaviour
             if (fase33[i] != null)
                 fase33[i].SetActive(false);
     }
+    
 
     public void OpenRerollCardPanel()
     {

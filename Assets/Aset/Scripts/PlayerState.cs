@@ -5,6 +5,7 @@ public class PlayerState : ScriptableObject
 {
     public int[] selectedCharacter = new int[4];
     public string[] playerNames = new string[4];
+    public int lastProcessedTurn = -1;
 
     public bool hasBackstep;
 
@@ -22,8 +23,7 @@ public class PlayerState : ScriptableObject
 
         // ===== COOLDOWN =====
         public int cardCooldown; // sisa cooldown kartu
-        public int charaBuffCooldown; // sisa cooldown buff karakter
-        public int buffStartTurn;
+        public int charaBuffCooldown;
     }
 
     [System.Serializable]
@@ -120,6 +120,7 @@ public class PlayerState : ScriptableObject
         // reset turn system
         currentTurn = 1;
         currentPlayerIndex = 0;
+
         hasBackstep = false;
 
         // reset backup
@@ -153,6 +154,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
+
                     AdvanceTurn();
                 }
             }
@@ -164,6 +166,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
+
                     AdvanceTurn();
                 }
             }
@@ -248,11 +251,51 @@ public class PlayerState : ScriptableObject
 
     void AdvanceTurn()
     {
+        // for (int i = 0; i < players.Length; i++)
+        // {
+        //     if (players[i].charaBuffCooldown > 0)
+        //         players[i].charaBuffCooldown--;
+        // }
+    }
+
+    void OnEnable()
+    {
+        TryReduceCooldownByTurn();
+    }
+
+    void TryReduceCooldownByTurn()
+    {
+        // pertama kali init
+        if (lastProcessedTurn == -1)
+        {
+            lastProcessedTurn = currentTurn;
+            return;
+        }
+
+        int deltaTurn = currentTurn - lastProcessedTurn;
+        if (deltaTurn <= 0)
+            return; // TURN TIDAK BERUBAH → JANGAN KURANGI
+
+        for (int t = 0; t < deltaTurn; t++)
+        {
+            ReduceOnce();
+        }
+
+        lastProcessedTurn = currentTurn;
+    }
+
+    void ReduceOnce()
+    {
         for (int i = 0; i < players.Length; i++)
         {
             if (players[i].charaBuffCooldown > 0)
                 players[i].charaBuffCooldown--;
         }
+    }
+
+    public bool CanUseCharaBuff(PlayerData player)
+    {
+        return player.charaBuffCooldown <= 0;
     }
 
     public void SetPoliceDice(int value, int policeIndex)
@@ -299,20 +342,6 @@ public class PlayerState : ScriptableObject
         players[index].lastDiceResult = 0;
         players[index].lastTypeCard = "";
         players[index].lastScannedCardID = "";
-    }
-
-    public bool CanUseCharaBuff(PlayerData player)
-    {
-        // tidak ada cooldown → bebas
-        if (player.charaBuffCooldown <= 0)
-            return true;
-
-        // masih di turn yang sama saat buff dipakai → boleh (backstep case)
-        if (player.buffStartTurn == currentTurn)
-            return true;
-
-        // selain itu → terkunci
-        return false;
     }
 
     //setiap turn diisi 4 player + 1 police
