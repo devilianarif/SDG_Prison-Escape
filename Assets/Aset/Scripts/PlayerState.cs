@@ -12,17 +12,16 @@ public class PlayerState : ScriptableObject
     [System.Serializable]
     public class PlayerData
     {
-        public int characterIndex; // index karakter yang dipilih
+        public int characterIndex; 
         public string playername;
-        public int health = 5; // health awal
-        public int lastDiceResult; // hasil dadu terakhir
-        public string lastTypeCard; // tipe kartu terakhir
+        public int health = 5; 
+        public int lastDiceResult; 
+        public string lastTypeCard; 
         public int rerollChanceLeft;
 
-        public string lastScannedCardID; // ID kartu terakhir yang discan
+        public string lastScannedCardID; 
 
-        // ===== COOLDOWN =====
-        public int cardCooldown; // sisa cooldown kartu
+        public int cardCooldown; 
         public int charaBuffCooldown;
     }
 
@@ -78,7 +77,6 @@ public class PlayerState : ScriptableObject
 
     public void ResetPlayerData()
     {
-        // jaga data identitas dulu
         string[] cachedNames = new string[4];
         int[] cachedCharacters = new int[4];
 
@@ -96,18 +94,15 @@ public class PlayerState : ScriptableObject
             }
         }
 
-        // pastikan array ada
         players = new PlayerData[4];
 
         for (int i = 0; i < 4; i++)
         {
             players[i] = new PlayerData();
 
-            // === IDENTITAS (JANGAN HILANG) ===
             players[i].playername = cachedNames[i];
             players[i].characterIndex = cachedCharacters[i];
 
-            // === STATE GAMEPLAY (RESET) ===
             players[i].health = 5;
             players[i].lastDiceResult = 0;
             players[i].lastTypeCard = "";
@@ -117,13 +112,11 @@ public class PlayerState : ScriptableObject
             players[i].rerollChanceLeft = 0;
         }
 
-        // reset turn system
         currentTurn = 1;
         currentPlayerIndex = 0;
 
         hasBackstep = false;
 
-        // reset backup
         for (int i = 0; i < 4; i++)
         {
             if (backup[i] == null)
@@ -132,7 +125,6 @@ public class PlayerState : ScriptableObject
             backup[i].CopyFrom(players[i]);
         }
 
-        // reset police
         for (int i = 0; i < polices.Length; i++)
             polices[i] = new PoliceData();
     }
@@ -154,7 +146,6 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-                    // TURUNKAN COOLDOWN LANGSUNG
                     for (int i = 0; i < players.Length; i++)
                     {
                         if (players[i].charaBuffCooldown > 0)
@@ -173,7 +164,6 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-                    // TURUNKAN COOLDOWN LANGSUNG mogabis
                     for (int i = 0; i < players.Length; i++)
                     {
                         if (players[i].charaBuffCooldown > 0)
@@ -185,14 +175,12 @@ public class PlayerState : ScriptableObject
                 }
             }
 
-            // skip player mati
             if (IsPlayerTurn() && IsPlayerDead(currentPlayerIndex))
                 continue;
 
             break;
         }
 
-        // RESET NILAI AKSI UNTUK PLAYER BARU
         if (IsPlayerTurn())
         {
             ResetActionData(currentPlayerIndex);
@@ -263,18 +251,8 @@ public class PlayerState : ScriptableObject
         );
     }
 
-    void AdvanceTurn()
-    {
-        // for (int i = 0; i < players.Length; i++)
-        // {
-        //     if (players[i].charaBuffCooldown > 0)
-        //         players[i].charaBuffCooldown--;
-        // }
-    }
-
     void TryReduceCooldownByTurn()
     {
-        // pertama kali init
         if (lastProcessedTurn == -1)
         {
             lastProcessedTurn = currentTurn;
@@ -283,7 +261,7 @@ public class PlayerState : ScriptableObject
 
         int deltaTurn = currentTurn - lastProcessedTurn;
         if (deltaTurn <= 0)
-            return; // TURN TIDAK BERUBAH → JANGAN KURANGI
+            return; 
 
         for (int t = 0; t < deltaTurn; t++)
         {
@@ -327,7 +305,6 @@ public class PlayerState : ScriptableObject
 
     public void SaveBackup(int playerIndex)
     {
-        // backup SEMUA player, bukan cuma satu
         for (int i = 0; i < players.Length; i++)
         {
             if (backup[i] == null)
@@ -352,11 +329,4 @@ public class PlayerState : ScriptableObject
         players[index].lastTypeCard = "";
         players[index].lastScannedCardID = "";
     }
-
-    //setiap turn diisi 4 player + 1 police
-    //turn 1 = p1 turn, p2, p3, p4, police standby
-    //turn 2 = p1 turn, p2, p3, p4, police standby
-    //turn 3 = p1 turn, p2, p3, p4, police standby
-    //turn 4 = p1 turn, p2, p3, p4, police turn
-    //turn 5 = p1 turn, p2, p3, p4, police turn
 }

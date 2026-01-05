@@ -134,17 +134,14 @@ public class CharacterButton : MonoBehaviour
     {
         if (c == null) return "";
 
-        // benar-benar tidak punya kemampuan
         if (string.IsNullOrEmpty(c.buffname) && string.IsNullOrEmpty(c.efek))
             return "Tidak memiliki kemampuan khusus";
 
         string info = "";
 
-        // 1. Nama buff / kemampuan
         if (!string.IsNullOrEmpty(c.buffname))
             info += c.buffname;
 
-        // 2. Deskripsi efek utama
         if (!string.IsNullOrEmpty(c.efek))
         {
             if (!string.IsNullOrEmpty(info))
@@ -153,7 +150,6 @@ public class CharacterButton : MonoBehaviour
             info += c.efek;
         }
 
-        // 3. Nilai buff (dikumpulkan dalam kurung)
         string valueInfo = "";
 
         if (c.bufvdice)
@@ -174,7 +170,6 @@ public class CharacterButton : MonoBehaviour
             info += $" ({valueInfo})";
         }
 
-        // 4. Cooldown (pakai bracket biar kebaca jelas)
         if (c.coldoncharabuf > 0)
             info += $" [CD {c.coldoncharabuf}]";
 

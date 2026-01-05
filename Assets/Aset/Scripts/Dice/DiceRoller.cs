@@ -85,22 +85,18 @@ public class DiceRoller : MonoBehaviour
         rb.AddForce(dir * throwForce, ForceMode.Impulse);
         rb.AddTorque(Random.insideUnitSphere * throwTorque, ForceMode.Impulse);
 
-        // tunggu sampai benar-benar diam
         yield return new WaitUntil(() =>
         rb.linearVelocity.sqrMagnitude < 0.01f &&
         rb.angularVelocity.sqrMagnitude < 0.01f
         );
         yield return new WaitForSeconds(0.2f);
-        // aktifkan pembacaan face setelah dice stop
         allowRead = true;
 
-        // tunggu sampai ada face yang terbaca
         yield return new WaitUntil(() => valueReader.GetValue() != 0);
 
         lastResult = valueReader.GetValue();
         Debug.Log("Hasil dadu: " + lastResult);
 
-        // === TAMPILKAN NILAI RAW LANGSUNG ===
         valueReader.ForceValue(lastResult);
 
         if (valueReader.gameManager != null && !valueReader.isPoliceDice)
@@ -129,14 +125,11 @@ public void ResetDiceFully()
 
     if (rb == null) return;
 
-    // 1. HENTIKAN GERAK SAAT MASIH NON-KINEMATIC
     rb.linearVelocity = Vector3.zero;
     rb.angularVelocity = Vector3.zero;
 
-    // 2. BARU JADIKAN KINEMATIC
     rb.isKinematic = true;
 
-    // 3. RESET TRANSFORM
     transform.position = startPos + Vector3.up * 0.1f;
     transform.rotation = startRot;
 }

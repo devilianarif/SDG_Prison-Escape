@@ -12,7 +12,7 @@ public class LobbyManager : MonoBehaviour
 
 
     public PlayerState playerState;
-    public CardChara[] characterDatabase; // semua data karakter
+    public CardChara[] characterDatabase; 
 
 
     [Header("Player UI Elements")]
@@ -40,8 +40,6 @@ public class LobbyManager : MonoBehaviour
 
 
 
-
-    //------------------------------------------
    void Start()
 {
     GetPlayerSelected();
@@ -103,10 +101,6 @@ public void CloseResetUI()
 
     }
 
-
-    //------------------------------------------
-    // Ambil data karakter dari ScriptableObject
-    //------------------------------------------
     public void GetPlayerSelected()
     {
         for (int i = 0; i < 4; i++)
@@ -121,10 +115,6 @@ public void CloseResetUI()
     }
 
 
-
-    //------------------------------------------
-    // Setup UI turn awal
-    //------------------------------------------
     public void faseTurn()
     {
         for (int i = 0; i < 4; i++)
@@ -134,7 +124,6 @@ public void CloseResetUI()
         for (int i = 0; i < turnInfoText.Length; i++)
             turnInfoText[i].text = "Turn " + t;
 
-        // StartCoroutine(ShowTurnText());
 
         for (int i = 0; i < backStepTurnButton.Length; i++)
             backStepTurnButton[i].gameObject.SetActive(false);
@@ -152,15 +141,11 @@ public void CloseResetUI()
 
     }
 
-    //------------------------------------------
-    // Sistem turn 1-4 player lalu polisi
-    //------------------------------------------
     public void NextTurn()
     {
         int p = playerState.currentPlayerIndex;
         int t = playerState.currentTurn;
 
-        // matikan semua dulu
         for (int i = 0; i < 4; i++)
         {
             playerActionButtons[i].gameObject.SetActive(false);
@@ -169,12 +154,10 @@ public void CloseResetUI()
 
         policeActionButton.gameObject.SetActive(false);
 
-        // kalau giliran polisi
         if (playerState.IsPoliceTurn())
         {
             policeActionButton.gameObject.SetActive(true);
         }
-        // kalau giliran player
         else if (playerState.IsPlayerTurn())
         {
             playerActionButtons[p].gameObject.SetActive(true);
@@ -186,8 +169,6 @@ public void CloseResetUI()
             turnInfoText[i].text = "Turn " + t;
 
 
-
-        // refresh HP dan status mati setiap pindah turn
         UpdateHealthUI();
         playerMatiUI();
         if (playerState.currentTurn >= 2)
@@ -211,9 +192,6 @@ public void CloseResetUI()
             turnInfoText[i].gameObject.SetActive(false);
     }
 
-    //------------------------------------------
-    // Aksi player pindah ke scene Action UI
-    //------------------------------------------
     public void actionPerTurnPlayer(int playerIndex)
     {
         playerState.SaveBackup(playerIndex);
@@ -223,9 +201,6 @@ public void CloseResetUI()
 
     }
 
-    //------------------------------------------
-    // Aksi polisi pindah ke scene polisi
-    //------------------------------------------
     public void actionPerTurnPolice()
     {
         SceneManager.LoadScene(scenePoliceActionUI);
@@ -251,7 +226,6 @@ public void CloseResetUI()
 
     public void playerMatiUI()
     {
-        //jika player helath 0 tampilkan image mati
         for (int i = 0; i < 4; i++)
         {
             int hp = playerState.players[i].health;

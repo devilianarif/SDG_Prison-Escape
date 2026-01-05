@@ -21,11 +21,8 @@ public class PlayerSlotUI : MonoBehaviour
     public float animSpeed = 10f;
 
     Vector3[] targetScale;
-    // urutan giliran: Player 1, 3, 4, 2
     int[] turnOrder = { 0, 2, 3, 1 };
 
-    // team berdasarkan giliran
-    // 0 = Team A, 1 = Team B
     int[] teamByTurn = { 0, 1, 1, 0 };
     int currentTurn = 0;
 

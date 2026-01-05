@@ -100,20 +100,16 @@ public class SelectCharacterManager : MonoBehaviour
         );
     }
 
-    // UI ACC
     void OpenACC()
     {
         if (!isAllReady)
             return;
 
-        // 1. simpan hasil pilihan
         for (int i = 0; i < 4; i++)
             playerState.selectedCharacter[i] = finalCharacterForPlayer[i];
 
-        // 2. reset state gameplay
         playerState.ResetPlayerData();
 
-        // 3. inject ulang character ke PlayerData
         for (int i = 0; i < 4; i++)
         {
             int idx = finalCharacterForPlayer[i];

@@ -20,7 +20,6 @@ public class Wheel2DRoller : MonoBehaviour
 
     void Update()
     {
-        // wheelObject ikut canvas tapi XY-nya dikunci di bawah
         HandleSpin();
         LockXY();
     }
@@ -50,7 +49,6 @@ public class Wheel2DRoller : MonoBehaviour
 
     void LockXY()
     {
-        // kunci XY selalu tidak berubah
         Vector3 e = wheelObject.localEulerAngles;
         wheelObject.localEulerAngles = new Vector3(setRX, setRY, e.z);
     }

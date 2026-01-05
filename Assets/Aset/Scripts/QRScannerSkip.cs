@@ -13,7 +13,6 @@ public class QRScannerSkip : MonoBehaviour
 
     public System.Action<string> OnQRRead;
 
-    // ukuran area scan (semakin kecil semakin cepat)
     public float scanArea = 0.35f;
 
     void Start()
@@ -42,7 +41,6 @@ public class QRScannerSkip : MonoBehaviour
 
             string camName = devices[0].name;
 
-            // pilih kamera belakang jika ada
             foreach (var d in devices)
             {
                 if (!d.isFrontFacing)
@@ -72,7 +70,6 @@ public class QRScannerSkip : MonoBehaviour
         int w = cam.width;
         int h = cam.height;
 
-        // crop area tengah
         int cropW = (int)(w * scanArea);
         int cropH = (int)(h * scanArea);
         int startX = (w - cropW) / 2;
@@ -100,13 +97,11 @@ public class QRScannerSkip : MonoBehaviour
 
     private void AutoFlip()
     {
-        // mirror otomatis kamera depan
         if (cam != null && cam.videoVerticallyMirrored)
             preview.rectTransform.localScale = new Vector3(-1, 1, 1);
         else
             preview.rectTransform.localScale = Vector3.one;
 
-        // rotasi otomatis
         preview.rectTransform.localEulerAngles =
             new Vector3(0, 0, -cam.videoRotationAngle);
     }

@@ -13,8 +13,7 @@ public class QRScannerCard : MonoBehaviour
 
     public System.Action<string> OnQRRead;
 
-    // ukuran area scan (lebih kecil = lebih cepat, lebih akurat)
-    public float scanArea = 0.35f; // 35 persen area tengah
+    public float scanArea = 0.35f; 
 
     void Start()
     {
@@ -42,7 +41,6 @@ public class QRScannerCard : MonoBehaviour
 
             string camName = devices[0].name;
 
-            // pilih kamera belakang dulu (lebih stabil)
             foreach (var d in devices)
             {
                 if (!d.isFrontFacing)
@@ -68,12 +66,10 @@ public class QRScannerCard : MonoBehaviour
         if (cam == null || !cam.isPlaying) return;
         if (cam.width < 100) return;
 
-        // Ambil pixel
         Color32[] data = cam.GetPixels32();
         int w = cam.width;
         int h = cam.height;
 
-        // Crop area tengah untuk akurasi & speed tinggi
         int cropW = (int)(w * scanArea);
         int cropH = (int)(h * scanArea);
 
@@ -90,7 +86,6 @@ public class QRScannerCard : MonoBehaviour
             }
         }
 
-        // ZXing decode
         var result = reader.Decode(cropped, cropW, cropH);
 
         if (result != null)
@@ -98,13 +93,11 @@ public class QRScannerCard : MonoBehaviour
             OnQRRead?.Invoke(result.Text);
         }
 
-        // AUTO-FLIP kamera depan
         AutoFlip();
     }
 
     private void AutoFlip()
     {
-        // fix mirror pada kamera depan
         if (cam != null && cam.videoVerticallyMirrored)
         {
             preview.rectTransform.localScale = new Vector3(-1, 1, 1);
@@ -114,7 +107,6 @@ public class QRScannerCard : MonoBehaviour
             preview.rectTransform.localScale = Vector3.one;
         }
 
-        // fix rotasi
         preview.rectTransform.localEulerAngles =
             new Vector3(0, 0, -cam.videoRotationAngle);
     }

@@ -21,7 +21,7 @@ public class DiceValueReader : MonoBehaviour
     {
         if (hasRecorded) return;
 
-        currentValue = value; // simpan raw dulu
+        currentValue = value;
         hasRecorded = true;
         
 
