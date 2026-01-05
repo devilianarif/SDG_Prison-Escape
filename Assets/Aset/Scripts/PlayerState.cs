@@ -154,7 +154,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-
+                    TryReduceCooldownByTurn();
                     AdvanceTurn();
                 }
             }
@@ -166,7 +166,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-
+                    TryReduceCooldownByTurn();
                     AdvanceTurn();
                 }
             }
@@ -256,11 +256,6 @@ public class PlayerState : ScriptableObject
         //     if (players[i].charaBuffCooldown > 0)
         //         players[i].charaBuffCooldown--;
         // }
-    }
-
-    void OnEnable()
-    {
-        TryReduceCooldownByTurn();
     }
 
     void TryReduceCooldownByTurn()
