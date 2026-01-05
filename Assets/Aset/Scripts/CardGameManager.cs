@@ -446,10 +446,15 @@ public class CardGameManager : MonoBehaviour
             );
 
             // buff chara = tambah 1 reroll lagi
-            if (chara != null && chara.bufrerolcard && player.charaBuffCooldown <= 0)
+            if (
+                chara != null
+                && chara.bufrerolcard
+                && gameManager.playerState.CanUseCharaBuff(player)
+            )
             {
                 extraReroll += 1;
                 player.charaBuffCooldown = chara.coldoncharabuf;
+                player.buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             player.rerollChanceLeft = extraReroll;
@@ -629,14 +634,13 @@ public class CardGameManager : MonoBehaviour
             if (
                 chara != null
                 && chara.buffattack
-                && // memang punya buff
-                chara.valuedamage > 0
-                && // buff valid
-                ps.players[casterIndex].charaBuffCooldown <= 0
+                && chara.valuedamage > 0
+                && gameManager.playerState.CanUseCharaBuff(ps.players[casterIndex])
             )
             {
                 dmg += Mathf.RoundToInt(chara.valuedamage);
                 ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
+                ps.players[casterIndex].buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             return dmg; // positif = damage
@@ -649,7 +653,11 @@ public class CardGameManager : MonoBehaviour
         {
             int heal = card.heal; // HEAL DASAR = NILAI KARTU
 
-            if (chara != null && chara.buffheal && ps.players[casterIndex].charaBuffCooldown <= 0)
+            if (
+                chara != null
+                && chara.buffheal
+                && gameManager.playerState.CanUseCharaBuff(ps.players[casterIndex])
+            )
             {
                 if (casterIndex == targetIndex)
                     heal += Mathf.RoundToInt(chara.valuehealdiri);
@@ -657,6 +665,7 @@ public class CardGameManager : MonoBehaviour
                     heal += Mathf.RoundToInt(chara.valueheallain);
 
                 ps.players[casterIndex].charaBuffCooldown = chara.coldoncharabuf;
+                ps.players[casterIndex].buffStartTurn = gameManager.playerState.currentTurn;
             }
 
             return -heal; // negatif = heal

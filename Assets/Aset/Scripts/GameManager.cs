@@ -1,17 +1,18 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public PlayerState playerState;
+
     [Header("Dice UI")]
     public DiceValueReader diceValueReader;
     bool isInReDice = false;
 
-
     public string sceneloby;
+
     [Header("Turn Player")]
     public string playerturn;
     public int defaultCanvasPlaneDistance = 1;
@@ -39,7 +40,6 @@ public class GameManager : MonoBehaviour
     public GameObject skipActionFaseTurnUI;
     bool isInSkipFase = false;
 
-
     [Header("Fase 1 - Roll Dice")]
     public DiceRoller diceRoller;
     public GameObject[] dice3dplane1;
@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Fase 3 - Scan Card + Action Card")]
     public CardGameManager cardGameManager;
+
     [Header("Fase 3 -action card dice efek")]
     public Button applydice;
     public GameObject[] fase33;
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
     int pilihDiceResult = -1;
     int latestDiceResult = 0;
     int beforeDiceResult = 0;
+
     [Header("Fasse 3 - rerol card")]
     public GameObject fase34;
     public Button applyrerolcard;
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
     int currentFase = 0;
     int totalFase = 3;
     public bool justApplied = false;
+
     void Start()
     {
         isRerollingCardType = false;
@@ -97,14 +100,11 @@ public class GameManager : MonoBehaviour
         ActionFaseUI();
     }
 
-
     // CALLBACK DARI CardGameManager
-
 
     void HandleScanStart()
     {
         nextFaseButton.gameObject.SetActive(false);
-
     }
 
     void HandleCardInfoShown()
@@ -132,29 +132,24 @@ public class GameManager : MonoBehaviour
         if (playerState.players[curr].health <= 0)
             return; // tidak boleh menyimpan state untuk player mati
 
-
-
         if (currentFase == 1)
             playerState.SetTypeCard(cardTypeRoller.lastType);
 
         if (currentFase == 2)
             playerState.SetScannedCardID(cardGameManager.lastCardID);
-
-
     }
+
     public int GetFinalDiceValue(int rawValue)
     {
         int curr = playerState.currentPlayerIndex;
 
-        var chara = cardGameManager
-            .database
-            .GetCharacter(playerState.players[curr].characterIndex);
+        var chara = cardGameManager.database.GetCharacter(playerState.players[curr].characterIndex);
 
         bool buffActive =
-            isInReDice &&
-            chara != null &&
-            chara.bufvdice &&
-            playerState.players[curr].charaBuffCooldown <= 0;
+            isInReDice
+            && chara != null
+            && chara.bufvdice
+            && playerState.players[curr].charaBuffCooldown <= 0;
 
         if (buffActive)
             return rawValue + Mathf.RoundToInt(chara.valuedice);
@@ -162,35 +157,32 @@ public class GameManager : MonoBehaviour
         return rawValue;
     }
 
-
     // SETUP TOMBOL
 
     void SetupActionButtons()
     {
-
         for (int i = 0; i < actionFaseButtons.Length; i++)
         {
             int idx = i;
-  actionFaseButtons[i].onClick.AddListener(() =>
-{
-    if (!isInSkipFase)
-        return;
+            actionFaseButtons[i]
+                .onClick.AddListener(() =>
+                {
+                    if (!isInSkipFase)
+                        return;
 
-    // === KONSUMSI MODE SKIP ===
-    isInSkipFase = false;
-    UpdateFaseButtonsLock();
+                    // === KONSUMSI MODE SKIP ===
+                    isInSkipFase = false;
+                    UpdateFaseButtonsLock();
 
-    currentFase = idx;
-    ActionFaseUI();
-    SaveState();
-});
-
-
+                    currentFase = idx;
+                    ActionFaseUI();
+                    SaveState();
+                });
         }
 
         nextFaseButton.onClick.AddListener(() =>
         {
-                isInSkipFase = false; // <<< reset di sini
+            isInSkipFase = false; // <<< reset di sini
 
             currentFase++;
             if (currentFase >= totalFase)
@@ -203,7 +195,8 @@ public class GameManager : MonoBehaviour
         backFaseButton.onClick.AddListener(() =>
         {
             currentFase--;
-            if (currentFase < 0) currentFase = 0;
+            if (currentFase < 0)
+                currentFase = 0;
 
             ActionFaseUI();
             SaveState();
@@ -215,46 +208,45 @@ public class GameManager : MonoBehaviour
             SaveState();
         });
     }
+
     void UpdateFaseButtonsLock()
     {
-        
-             foreach (var btn in actionFaseButtons)
-        btn.interactable = isInSkipFase;
+        foreach (var btn in actionFaseButtons)
+            btn.interactable = isInSkipFase;
     }
+
     void UpdateNextButtonState()
-{
-    int curr = currentFase;
-
-    bool allowNext = false;
-
-    switch (curr)
     {
-        case 0: // FASE 1: Roll Dice
-            allowNext = playerState.players[playerState.currentPlayerIndex].lastDiceResult > 0;
-            break;
+        int curr = currentFase;
 
-        case 1: // FASE 2: Roll Type Card
-            allowNext = !string.IsNullOrEmpty(
-                playerState.players[playerState.currentPlayerIndex].lastTypeCard
-            );
-            break;
+        bool allowNext = false;
 
-        case 2: // FASE 3: Scan Card
-            allowNext = !string.IsNullOrEmpty(
-                playerState.players[playerState.currentPlayerIndex].lastScannedCardID
-            );
-            break;
+        switch (curr)
+        {
+            case 0: // FASE 1: Roll Dice
+                allowNext = playerState.players[playerState.currentPlayerIndex].lastDiceResult > 0;
+                break;
+
+            case 1: // FASE 2: Roll Type Card
+                allowNext = !string.IsNullOrEmpty(
+                    playerState.players[playerState.currentPlayerIndex].lastTypeCard
+                );
+                break;
+
+            case 2: // FASE 3: Scan Card
+                allowNext = !string.IsNullOrEmpty(
+                    playerState.players[playerState.currentPlayerIndex].lastScannedCardID
+                );
+                break;
+        }
+
+        nextFaseButton.interactable = allowNext;
     }
-
-    nextFaseButton.interactable = allowNext;
-}
-
-
 
     // SWITCH UI FASE
 
     public void ActionFaseUI()
-    {   // ==== FORCE CLOSE PANEL REROLL ====
+    { // ==== FORCE CLOSE PANEL REROLL ====
         if (fase34 != null)
             fase34.SetActive(false);
 
@@ -275,14 +267,16 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < actionFaseUI.Length; i++)
             actionFaseUI[i].SetActive(i == currentFase);
 
-        if (currentFase == 0) ActionFase1();
-        if (currentFase == 1) ActionFase2();
-        if (currentFase == 2) ActionFase3();
+        if (currentFase == 0)
+            ActionFase1();
+        if (currentFase == 1)
+            ActionFase2();
+        if (currentFase == 2)
+            ActionFase3();
         if (currentFase != 2)
             playerState.players[playerState.currentPlayerIndex].lastScannedCardID = "";
         UpdateChecklist();
         UpdateNextButtonState();
-
     }
 
     //=====================================================
@@ -290,7 +284,6 @@ public class GameManager : MonoBehaviour
     //=====================================================
     void ActionFase1()
     {
-
         if (mainCanvas)
             mainCanvas.planeDistance = diceCanvasPlaneDistance;
 
@@ -312,18 +305,18 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < dice3dplane1.Length; i++)
         {
-
             dice3dplane1[i].SetActive(true);
         }
     }
+
     void hidedice3dui()
     {
         for (int i = 0; i < dice3dplane1.Length; i++)
         {
-
             dice3dplane1[i].SetActive(false);
         }
     }
+
     //=====================================================
     // FASE 2
     //=====================================================
@@ -354,15 +347,12 @@ public class GameManager : MonoBehaviour
         if (mainCanvas)
             mainCanvas.planeDistance = defaultCanvasPlaneDistance;
 
-
-
         cardGameManager.ShowScanUIPanel();
 
         cardGameManager.HighlightCurrentTurn();
         // nextFaseButtonText.text = "Apply";
-
-
     }
+
     public void OpenReDicePanel()
     {
         int curr = playerState.currentPlayerIndex; // <<< HARUS PALING ATAS
@@ -397,42 +387,41 @@ public class GameManager : MonoBehaviour
         pilihdadu[1].onClick.RemoveAllListeners();
 
         // === tombol BEFORE ===
-        pilihdadu[0].onClick.AddListener(() =>
-        {
-            pilihDiceResult = beforeDiceResult;
+        pilihdadu[0]
+            .onClick.AddListener(() =>
+            {
+                pilihDiceResult = beforeDiceResult;
 
-            // tampilkan NILAI ORIGINAL SAJA
-            pilihdadutext[0].text = "Before: " + beforeDiceResult + " (selected)";
-            pilihdadutext[1].text = "Latest: " + latestDiceResult;
+                // tampilkan NILAI ORIGINAL SAJA
+                pilihdadutext[0].text = "Before: " + beforeDiceResult + " (selected)";
+                pilihdadutext[1].text = "Latest: " + latestDiceResult;
 
-            // tampilkan DETAIL di resultText
-            int buff = GetBuffValue();
-            diceValueReader.ShowResult(beforeDiceResult, buff);
-            SaveDiceSelection(beforeDiceResult);
+                // tampilkan DETAIL di resultText
+                int buff = GetBuffValue();
+                diceValueReader.ShowResult(beforeDiceResult, buff);
+                SaveDiceSelection(beforeDiceResult);
 
-            applydice.gameObject.SetActive(true);
-        });
-
+                applydice.gameObject.SetActive(true);
+            });
 
         // === tombol LATEST ===
-        pilihdadu[1].onClick.AddListener(() =>
-     {
-         if (latestDiceResult == 0) return;
+        pilihdadu[1]
+            .onClick.AddListener(() =>
+            {
+                if (latestDiceResult == 0)
+                    return;
 
-         pilihDiceResult = latestDiceResult;
+                pilihDiceResult = latestDiceResult;
 
-         pilihdadutext[1].text = "Latest: " + latestDiceResult + " (selected)";
-         pilihdadutext[0].text = "Before: " + beforeDiceResult;
+                pilihdadutext[1].text = "Latest: " + latestDiceResult + " (selected)";
+                pilihdadutext[0].text = "Before: " + beforeDiceResult;
 
-         int buff = GetBuffValue();
-         diceValueReader.ShowResult(latestDiceResult, buff);
-         SaveDiceSelection(latestDiceResult);
+                int buff = GetBuffValue();
+                diceValueReader.ShowResult(latestDiceResult, buff);
+                SaveDiceSelection(latestDiceResult);
 
-
-         applydice.gameObject.SetActive(true);
-     });
-
-
+                applydice.gameObject.SetActive(true);
+            });
     }
 
     void SaveDiceSelection(int rawValue)
@@ -455,15 +444,13 @@ public class GameManager : MonoBehaviour
     {
         int curr = playerState.currentPlayerIndex;
 
-        var chara = cardGameManager
-            .database
-            .GetCharacter(playerState.players[curr].characterIndex);
+        var chara = cardGameManager.database.GetCharacter(playerState.players[curr].characterIndex);
 
         if (
-            isInReDice &&
-            chara != null &&
-            chara.bufvdice &&
-            playerState.players[curr].charaBuffCooldown <= 0
+            isInReDice
+            && chara != null
+            && chara.bufvdice
+            && playerState.CanUseCharaBuff(playerState.players[curr])
         )
         {
             return Mathf.RoundToInt(chara.valuedice);
@@ -478,8 +465,6 @@ public class GameManager : MonoBehaviour
         pilihdadutext[1].text = "Latest: " + rawValue;
     }
 
-
-
     void ApplyReDiceEffect()
     {
         if (pilihDiceResult == -1)
@@ -489,24 +474,25 @@ public class GameManager : MonoBehaviour
         int baseDice = pilihDiceResult;
         int finalDice = baseDice;
 
-        var chara = cardGameManager
-            .database
-            .GetCharacter(playerState.players[curr].characterIndex);
+        var chara = cardGameManager.database.GetCharacter(playerState.players[curr].characterIndex);
 
         bool buffActive = false;
 
-        if (chara != null && chara.bufvdice && playerState.players[curr].charaBuffCooldown <= 0)
+        if (
+            chara != null
+            && chara.bufvdice
+            && playerState.CanUseCharaBuff(playerState.players[curr])
+        )
         {
             finalDice += Mathf.RoundToInt(chara.valuedice);
             buffActive = true;
             playerState.players[curr].charaBuffCooldown = chara.coldoncharabuf;
+            playerState.players[curr].buffStartTurn = playerState.currentTurn;
         }
 
         playerState.players[curr].lastDiceResult = finalDice;
 
-        Debug.Log(
-            $"[DICE APPLY] Base={baseDice} | BuffActive={buffActive} | Final={finalDice}"
-        );
+        Debug.Log($"[DICE APPLY] Base={baseDice} | BuffActive={buffActive} | Final={finalDice}");
 
         var card = cardGameManager.GetLastScannedCard();
         if (card != null && card.cooldownroundcard > 0)
@@ -514,7 +500,6 @@ public class GameManager : MonoBehaviour
 
         EndActionAndReturnToLobby();
     }
-
 
     public void HideReDicePanel()
     {
@@ -526,8 +511,7 @@ public class GameManager : MonoBehaviour
     public void OpenRerollCardPanel()
     {
         int curr = playerState.currentPlayerIndex;
-        cardTypeRoller.rolltypecard.interactable =
-            playerState.players[curr].rerollChanceLeft > 0;
+        cardTypeRoller.rolltypecard.interactable = playerState.players[curr].rerollChanceLeft > 0;
 
         isRerollingCardType = true;
         latestRerolledCardType = "";
@@ -554,7 +538,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void SetLatestRerolledCardType(string type)
     {
         latestRerolledCardType = type;
@@ -564,6 +547,7 @@ public class GameManager : MonoBehaviour
 
         applyrerolcard.gameObject.SetActive(true);
     }
+
     void ApplyRerollCardType()
     {
         if (string.IsNullOrEmpty(latestRerolledCardType))
@@ -578,13 +562,13 @@ public class GameManager : MonoBehaviour
         EndActionAndReturnToLobby();
     }
 
-
     //=====================================================
     // FASE SKIP
     //=====================================================
     public void SkipActionFaseTurn()
-    {isInSkipFase = true;
-UpdateFaseButtonsLock();
+    {
+        isInSkipFase = true;
+        UpdateFaseButtonsLock();
 
         hidedice3dui();
         cardGameManager.ResetScannerState();
@@ -599,21 +583,16 @@ UpdateFaseButtonsLock();
             ui.SetActive(false);
         actionFase32UI.SetActive(false);
 
-
         for (int i = 0; i < actionButtonsImage.Length; i++)
         {
             actionButtonsImage[i].sprite = defaultButton;
         }
 
-
         skipActionFaseTurnButton.image.sprite = activeButton;
-
 
         skipActionFaseTurnUI.SetActive(true);
 
-
         skipCardGameManager.ShowScanUIPanel();
-
 
         DisableActionFase3();
     }
@@ -622,16 +601,14 @@ UpdateFaseButtonsLock();
     {
         Debug.Log("Fase 3 is disabled.");
 
-
         cardGameManager.HideScanUIPanel();
-
-
     }
 
     public void hideskipUI()
     {
         skipActionFaseTurnUI.SetActive(false);
     }
+
     public void ApplyCardEffectToPlayer(int targetIndex, int hpChange)
     {
         int currentHp = playerState.players[targetIndex].health;
@@ -659,22 +636,21 @@ UpdateFaseButtonsLock();
         }
 
         // di sini kalau mau ditambah efek lain boleh
-
-
     }
+
     public void EndActionAndReturnToLobby()
     {
         playerState.players[playerState.currentPlayerIndex].rerollChanceLeft = 0;
 
         playerState.NextPlayer();
         justApplied = true; // penting
-        Debug.Log("=== Next Player. Now, turn of Player "
-            + (playerState.currentPlayerIndex + 1) + " ===");
+        Debug.Log(
+            "=== Next Player. Now, turn of Player " + (playerState.currentPlayerIndex + 1) + " ==="
+        );
 
         SceneManager.LoadScene(sceneloby);
-
-
     }
+
     public void ForceBackToFase1FromSkip()
     {
         Debug.Log("Forced back to Phase 1 from SKIP due to an invalid card.");
@@ -690,18 +666,17 @@ UpdateFaseButtonsLock();
         bool cardOK = validcentang[2].activeSelf;
 
         return diceOK && typeOK && cardOK;
-
-
     }
+
     public void UpdateChecklist()
     {
         int curr = playerState.currentPlayerIndex;
 
         validcentang[0].SetActive(playerState.players[curr].lastDiceResult > 0);
         validcentang[1].SetActive(!string.IsNullOrEmpty(playerState.players[curr].lastTypeCard));
-        validcentang[2].SetActive(!string.IsNullOrEmpty(playerState.players[curr].lastScannedCardID));
+        validcentang[2]
+            .SetActive(!string.IsNullOrEmpty(playerState.players[curr].lastScannedCardID));
 
         UpdateNextButtonState();
-
     }
 }

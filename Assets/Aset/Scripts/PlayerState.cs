@@ -23,6 +23,7 @@ public class PlayerState : ScriptableObject
         // ===== COOLDOWN =====
         public int cardCooldown; // sisa cooldown kartu
         public int charaBuffCooldown; // sisa cooldown buff karakter
+        public int buffStartTurn;
     }
 
     [System.Serializable]
@@ -152,6 +153,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
+                    AdvanceTurn();
                 }
             }
             else
@@ -162,6 +164,7 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
+                    AdvanceTurn();
                 }
             }
 
@@ -176,12 +179,6 @@ public class PlayerState : ScriptableObject
         if (IsPlayerTurn())
         {
             ResetActionData(currentPlayerIndex);
-
-            if (players[currentPlayerIndex].cardCooldown > 0)
-                players[currentPlayerIndex].cardCooldown--;
-
-            if (players[currentPlayerIndex].charaBuffCooldown > 0)
-                players[currentPlayerIndex].charaBuffCooldown--;
 
             Debug.Log(
                 $"[TURN CHANGE] Player {currentPlayerIndex + 1} | "
@@ -249,6 +246,15 @@ public class PlayerState : ScriptableObject
         );
     }
 
+    void AdvanceTurn()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].charaBuffCooldown > 0)
+                players[i].charaBuffCooldown--;
+        }
+    }
+
     public void SetPoliceDice(int value, int policeIndex)
     {
         polices[policeIndex].lastDiceResult = value;
@@ -293,6 +299,20 @@ public class PlayerState : ScriptableObject
         players[index].lastDiceResult = 0;
         players[index].lastTypeCard = "";
         players[index].lastScannedCardID = "";
+    }
+
+    public bool CanUseCharaBuff(PlayerData player)
+    {
+        // tidak ada cooldown → bebas
+        if (player.charaBuffCooldown <= 0)
+            return true;
+
+        // masih di turn yang sama saat buff dipakai → boleh (backstep case)
+        if (player.buffStartTurn == currentTurn)
+            return true;
+
+        // selain itu → terkunci
+        return false;
     }
 
     //setiap turn diisi 4 player + 1 police
