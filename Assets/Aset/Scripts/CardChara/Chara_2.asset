@@ -15,9 +15,8 @@ MonoBehaviour:
   id: Chara_2
   role: Locksmith
   ability_as: 'Quick Pick / Breaker '
-  efek: Bad, Skill, and Luck cards may be exchanged with another card of the same
-    type (for example, to exchange a Bad card, insert the chosen card into the middle
-    of the Bad deck, then draw the top Bad card).
+  efek: You may exchange a Bad, Skill, or Luck card with another card of the same
+    type.
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
   karakter: {fileID: 810325795073249215, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5

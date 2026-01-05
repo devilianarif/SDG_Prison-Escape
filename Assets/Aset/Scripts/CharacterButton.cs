@@ -159,7 +159,7 @@ public class CharacterButton : MonoBehaviour
             valueInfo += $"Damage +{c.valuedamage}, ";
 
         if (c.buffheal)
-            valueInfo += $"Heal S{c.valuehealdiri} / A{c.valueheallain}, ";
+            valueInfo += $"Heal Self {c.valuehealdiri} / Any {c.valueheallain}, ";
 
         if (c.bufrerolcard)
             valueInfo += "Reroll +1, ";
