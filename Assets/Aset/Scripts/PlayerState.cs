@@ -154,8 +154,15 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-                    TryReduceCooldownByTurn();
-                    AdvanceTurn();
+                    // TURUNKAN COOLDOWN LANGSUNG
+                    for (int i = 0; i < players.Length; i++)
+                    {
+                        if (players[i].charaBuffCooldown > 0)
+                            players[i].charaBuffCooldown--;
+
+                        if (players[i].cardCooldown > 0)
+                            players[i].cardCooldown--;
+                    }
                 }
             }
             else
@@ -166,8 +173,15 @@ public class PlayerState : ScriptableObject
                 {
                     currentPlayerIndex = 0;
                     currentTurn++;
-                    TryReduceCooldownByTurn();
-                    AdvanceTurn();
+                    // TURUNKAN COOLDOWN LANGSUNG mogabis
+                    for (int i = 0; i < players.Length; i++)
+                    {
+                        if (players[i].charaBuffCooldown > 0)
+                            players[i].charaBuffCooldown--;
+
+                        if (players[i].cardCooldown > 0)
+                            players[i].cardCooldown--;
+                    }
                 }
             }
 
