@@ -14,12 +14,6 @@ public class CardTypeRoll : MonoBehaviour
     public string lastType;
     [Header("Feature Toggle")]
     public bool useHistory = false;
-
-<<<<<<< HEAD
-=======
-
-    // daftar tipe kartu
->>>>>>> parent of 1191698 (revisi badlebih banyka dpt, value dadu hilang , 2 efek kartu uncek skip cop dan dadu dame)
     private string[] cardTypes = { "Bad", "Lucky", "Skill" };
 
     void Start()
