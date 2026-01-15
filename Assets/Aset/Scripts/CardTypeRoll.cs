@@ -1,6 +1,6 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CardTypeRoll : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class CardTypeRoll : MonoBehaviour
     public GameManager gameManager;
 
     public string lastType;
+
     [Header("Feature Toggle")]
     public bool useHistory = false;
     private string[] cardTypes = { "Bad", "Lucky", "Skill" };
@@ -33,7 +34,6 @@ public class CardTypeRoll : MonoBehaviour
         cardTypeText.text = "";
     }
 
-
     void OpenHistory()
     {
         if (history != null)
@@ -51,11 +51,11 @@ public class CardTypeRoll : MonoBehaviour
             gameManager.playerState.SetTypeCard(lastType);
             gameManager.SaveState();
             gameManager.UpdateChecklist();
-            rolltypecard.interactable = false; 
+            rolltypecard.interactable = false;
             return;
         }
 
-            if (player.rerollChanceLeft <= 0)
+        if (player.rerollChanceLeft <= 0)
         {
             rolltypecard.interactable = false;
             return;
@@ -78,7 +78,6 @@ public class CardTypeRoll : MonoBehaviour
         cardTypeText.text = lastType;
         cardTypeText.color = GetColorByType(lastType);
     }
-
 
     Color GetColorByType(string type)
     {
