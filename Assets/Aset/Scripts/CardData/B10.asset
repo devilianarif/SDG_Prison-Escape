@@ -15,13 +15,15 @@ MonoBehaviour:
   id: Card_B10
   cardType: 0
   nama: Cursed Corridor
-  attack: 1
+  attack: 0
   heal: 0
   spriteCard: {fileID: -6588348210459645733, guid: c42dbe5791d0d2443ae48aa10b1570bb, type: 3}
   karakter: {fileID: 2072773235316747924, guid: e300a7e61beb72349a4ddacd8de1cb39, type: 3}
   informasi: This hallway feels alive with bad luck. No matter how you move, you
     keep slipping, stumbling, or getting snagged on something.
   efekkartu: -1 on dice roll
+  cooldownroundcard: 0
   isSkipCard: 0
   isEfekReDice: 0
   isRelifePlayer: 0
+  isRerolcard: 0

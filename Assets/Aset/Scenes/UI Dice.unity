@@ -2525,7 +2525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &330684470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5062,6 +5062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf04f93de5161f14f8a1281b621aadea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  badPercent: 70
+  luckyPercent: 15
+  skillPercent: 15
   cardTypeText: {fileID: 764422101}
   rolltypecard: {fileID: 311932756}
   history: {fileID: 784209790}
@@ -8689,7 +8692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1205775015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11038,7 +11041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1723705429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14918,6 +14921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf04f93de5161f14f8a1281b621aadea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  badPercent: 70
+  luckyPercent: 15
+  skillPercent: 15
   cardTypeText: {fileID: 283014935}
   rolltypecard: {fileID: 2085243548}
   history: {fileID: 2123835724}
@@ -22419,7 +22425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8032985437143599463
 GameObject:
   m_ObjectHideFlags: 0
