@@ -96,7 +96,6 @@ public class policeManager : MonoBehaviour
     {
         valueText.text = "...";
 
-        // reset hasil dadu lama dulu
         for (int i = 0; i < diceRoller.Length; i++)
         {
             diceRoller[i].lastResult = 0;
@@ -104,14 +103,12 @@ public class policeManager : MonoBehaviour
                 diceRoller[i].valueReader.ForceValue(0);
         }
 
-        // mulai roll semua dadu
         for (int i = 0; i < diceRoller.Length; i++)
             diceRoller[i].RollButton();
 
         if (playerState.polices[0].isWheel)
             wheel2DRoller.Rotate();
 
-        // sekarang baru nunggu hasil BARU
         yield return new WaitUntil(() =>
             diceRoller[0].lastResult != 0 &&
             diceRoller[1].lastResult != 0 &&

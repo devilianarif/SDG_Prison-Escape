@@ -15,13 +15,12 @@ MonoBehaviour:
   id: Chara_5
   role: Medic
   ability_as: 'First Aid / Utility '
-  efek: "When healing themself, the Medic\u2019s heal cards restore +2 health. When
-    healing another player, heal cards restore only +1 health."
+  efek: 'Medic heal cards restore +2 health to self or +1 health to other players. '
   cardfull: {fileID: -475366513794988134, guid: 5cac760170ba7004e9ac47ae7ad83123, type: 3}
   karakter: {fileID: -7130844508404820948, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
   buffname: Medic
-  coldoncharabuf: 4
+  coldoncharabuf: 5
   bufvdice: 0
   valuedice: 0
   bufrerolcard: 0

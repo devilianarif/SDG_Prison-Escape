@@ -20,7 +20,7 @@ MonoBehaviour:
   karakter: {fileID: 5712867871659811231, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
   buffname: Strategist
-  coldoncharabuf: 1
+  coldoncharabuf: 2
   bufvdice: 0
   valuedice: 0
   bufrerolcard: 1

@@ -20,7 +20,7 @@ MonoBehaviour:
   karakter: {fileID: -6930432791568582698, guid: 7500882f6e74e0046a52dc889b814c22, type: 3}
   health: 5
   buffname: Escape Artist
-  coldoncharabuf: 1
+  coldoncharabuf: 2
   bufvdice: 1
   valuedice: 2
   bufrerolcard: 0

@@ -29,7 +29,10 @@ public class CardTypeRoll : MonoBehaviour
     [Header("Feature Toggle")]
     public bool useHistory = false;
 
+<<<<<<< HEAD
     // daftar tipe kartu
+=======
+>>>>>>> 3ca2e4cd2890ba55833196325e5e3c1175c40b42
     private string[] cardTypes = { "Bad", "Lucky", "Skill" };
 
     void Start()
@@ -125,22 +128,16 @@ public class CardTypeRoll : MonoBehaviour
         int curr = gameManager.playerState.currentPlayerIndex;
         var player = gameManager.playerState.players[curr];
 
-        // =========================
-        // FASE 2 → ROLL WAJIB
-        // =========================
         if (!gameManager.isRerollingCardType)
         {
             DoRoll();
             gameManager.playerState.SetTypeCard(lastType);
             gameManager.SaveState();
             gameManager.UpdateChecklist();
-            rolltypecard.interactable = false; // cuma boleh 1x
+            rolltypecard.interactable = false; 
             return;
         }
 
-        // =========================
-        // REROLL
-        // =========================
         if (player.rerollChanceLeft <= 0)
         {
             rolltypecard.interactable = false;
