@@ -29,10 +29,6 @@ public class CardTypeRoll : MonoBehaviour
     [Header("Feature Toggle")]
     public bool useHistory = false;
 
-<<<<<<< HEAD
-    // daftar tipe kartu
-=======
->>>>>>> 3ca2e4cd2890ba55833196325e5e3c1175c40b42
     private string[] cardTypes = { "Bad", "Lucky", "Skill" };
 
     void Start()
@@ -138,7 +134,7 @@ public class CardTypeRoll : MonoBehaviour
             return;
         }
 
-        if (player.rerollChanceLeft <= 0)
+            if (player.rerollChanceLeft <= 0)
         {
             rolltypecard.interactable = false;
             return;
