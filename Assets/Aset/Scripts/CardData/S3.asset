@@ -22,8 +22,6 @@ MonoBehaviour:
   informasi: "Scramble the radios and shut up the walkie-talkies\u2014no one hears
     the alarm until you\u2019re long gone."
   efekkartu: "Skip cop\u2019s turn"
-  cooldownroundcard: 0
-  isSkipCard: 0
+  isSkipCard: 1
   isEfekReDice: 0
   isRelifePlayer: 0
-  isRerolcard: 0
