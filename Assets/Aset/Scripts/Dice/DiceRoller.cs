@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class DiceRoller : MonoBehaviour
 {
@@ -29,11 +29,13 @@ public class DiceRoller : MonoBehaviour
         startRot = transform.rotation;
 
         rb = GetComponent<Rigidbody>();
-        if (valueReader != null) valueReader.ForceValue(0);
+        if (valueReader != null)
+            valueReader.ForceValue(0);
 
         if (rollButton != null)
             rollButton.onClick.AddListener(RollButton);
     }
+
     public void Update()
     {
         Vector3 acc = Input.acceleration;
@@ -43,22 +45,25 @@ public class DiceRoller : MonoBehaviour
         {
             if (rb != null)
             {
-                rb.AddForce(new Vector3(delta.x, Mathf.Abs(delta.y), delta.z) * shakeForce, ForceMode.Impulse);
+                rb.AddForce(
+                    new Vector3(delta.x, Mathf.Abs(delta.y), delta.z) * shakeForce,
+                    ForceMode.Impulse
+                );
             }
         }
 
         lastAcc = acc;
     }
+
     public void RollButton()
     {
-        if (isRolling) return;
+        if (isRolling)
+            return;
         StartCoroutine(RollSequence());
-
     }
 
     IEnumerator RollSequence()
     {
-
         isRolling = true;
         allowRead = false;
         valueReader.ResetRecord();
@@ -86,8 +91,7 @@ public class DiceRoller : MonoBehaviour
         rb.AddTorque(Random.insideUnitSphere * throwTorque, ForceMode.Impulse);
 
         yield return new WaitUntil(() =>
-        rb.linearVelocity.sqrMagnitude < 0.01f &&
-        rb.angularVelocity.sqrMagnitude < 0.01f
+            rb.linearVelocity.sqrMagnitude < 0.01f && rb.angularVelocity.sqrMagnitude < 0.01f
         );
         yield return new WaitForSeconds(0.2f);
         allowRead = true;
@@ -106,33 +110,43 @@ public class DiceRoller : MonoBehaviour
             valueReader.gameManager.UpdateLatestDice(lastResult);
         }
 
-    
-    isRolling = false;
-
-
+        isRolling = false;
     }
-public void ResetDiceFully()
-{
-    allowRead = false;
-    isRolling = false;
-    lastResult = 0;
 
-    if (valueReader != null)
-        valueReader.ResetRecord();
+    public void ResetDiceFully()
+    {
+        allowRead = false;
+        isRolling = false;
+        lastResult = 0;
 
-    foreach (var face in GetComponentsInChildren<DiceFace>())
-        face.ResetFace();
+        if (valueReader != null)
+            valueReader.ResetRecord();
 
-    if (rb == null) return;
+        foreach (var face in GetComponentsInChildren<DiceFace>())
+            face.ResetFace();
 
-    rb.linearVelocity = Vector3.zero;
-    rb.angularVelocity = Vector3.zero;
+        if (rb == null)
+            return;
 
-    rb.isKinematic = true;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
-    transform.position = startPos + Vector3.up * 0.1f;
-    transform.rotation = startRot;
-}
+        rb.isKinematic = true;
 
+        transform.position = startPos + Vector3.up * 0.1f;
+        transform.rotation = startRot;
+    }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (!isRolling)
+            return;
+        if (!col.gameObject.CompareTag("Wall"))
+            return;
+
+        Vector3 bounceDir = (transform.position - col.contacts[0].point).normalized;
+        bounceDir.y = 1f; // paksa naik sedikit
+
+        rb.AddForce(bounceDir * throwForce * 0.7f, ForceMode.Impulse);
+    }
 }
