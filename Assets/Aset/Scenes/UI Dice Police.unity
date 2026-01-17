@@ -284,8 +284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2341,8 +2341,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4400,8 +4400,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Imprison '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4874,8 +4874,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: History
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6155,8 +6155,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: History
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6636,8 +6636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6731,7 +6731,7 @@ Canvas:
   m_GameObject: {fileID: 3465478205831479049}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 6212148552911596224}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -7354,8 +7354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 is imprisoned
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7542,8 +7542,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7867,8 +7867,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 is imprisoned
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8143,8 +8143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 is imprisoned
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8757,6 +8757,7 @@ GameObject:
   - component: {fileID: 809195570500556205}
   - component: {fileID: 5966592618722007296}
   - component: {fileID: 5289341242386589320}
+  - component: {fileID: 8731781574689798097}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8952,8 +8953,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Apply
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9356,8 +9357,8 @@ MonoBehaviour:
 
     6'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9724,8 +9725,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team B
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9931,8 +9932,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Imprisonment
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10057,8 +10058,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10179,8 +10180,8 @@ MonoBehaviour:
 
     Police 4 (x)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10271,8 +10272,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10974,8 +10975,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Roll
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11342,8 +11343,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12205,8 +12206,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12346,8 +12347,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12562,8 +12563,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12808,8 +12809,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 is imprisoned
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12900,8 +12901,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Make sure the player in jail is correct
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13157,6 +13158,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &8731781574689798097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3465478205831479049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6114fe1967edf834198a1b3a884bbd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoTMPFontApplier
+  targetFont: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  includeInactive: 1
 --- !u!224 &8748310671915914455
 RectTransform:
   m_ObjectHideFlags: 0
