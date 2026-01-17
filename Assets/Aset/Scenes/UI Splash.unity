@@ -1735,7 +1735,6 @@ GameObject:
   - component: {fileID: 1749260716885746403}
   - component: {fileID: 4733793454547594830}
   - component: {fileID: 6493007153765470662}
-  - component: {fileID: 7661130233531842719}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2199,20 +2198,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &7661130233531842719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2552294546787862599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6114fe1967edf834198a1b3a884bbd93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoTMPFontApplier
-  targetFont: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
-  includeInactive: 1
 --- !u!1 &7792715967545426415
 GameObject:
   m_ObjectHideFlags: 0
