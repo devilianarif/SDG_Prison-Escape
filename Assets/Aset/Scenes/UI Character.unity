@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -604,8 +604,8 @@ MonoBehaviour:
   m_text: Look at the top 2 cards of the deck (you may place them back on top or
     insert them into the middle of the deck)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -741,8 +741,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -881,8 +881,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 19.95
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1502,8 +1502,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1842,8 +1842,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2054,8 +2054,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2428,8 +2428,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2568,8 +2568,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2593,10 +2593,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.3
-  m_fontSizeBase: 37.3
+  m_fontSize: 20.5
+  m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2930,8 +2930,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3558,8 +3558,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3583,7 +3583,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3696,8 +3696,8 @@ MonoBehaviour:
   m_text: Look at the top 2 cards of the deck (you may place them back on top or
     insert them into the middle of the deck)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4100,8 +4100,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4125,7 +4125,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 19.95
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4237,8 +4237,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4262,7 +4262,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4699,8 +4699,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5189,8 +5189,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5214,7 +5214,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 19.95
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5530,8 +5530,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5794,8 +5794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6596,8 +6596,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6621,7 +6621,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 19.95
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7171,8 +7171,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7308,8 +7308,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7446,8 +7446,8 @@ MonoBehaviour:
   m_text: Look at the top 2 cards of the deck (you may place them back on top or
     insert them into the middle of the deck)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7658,8 +7658,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team B
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7948,8 +7948,8 @@ MonoBehaviour:
     1 damage pada kartu attack. \r\nBuff heal meningkatkan heal diri sendiri sebesar
     2 dan heal ke pemain lain sebesar 1. \r\nCooldown efek karakter 3 ronde.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7973,7 +7973,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 19.95
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8726,8 +8726,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8863,8 +8863,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9714,8 +9714,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9851,8 +9851,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10139,8 +10139,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10164,7 +10164,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10533,8 +10533,8 @@ MonoBehaviour:
   m_text: Look at the top 2 cards of the deck (you may place them back on top or
     insert them into the middle of the deck)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10670,8 +10670,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10695,7 +10695,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.9
+  m_fontSize: 28.85
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10882,8 +10882,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Explorer/Controller
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
-  m_sharedMaterial: {fileID: -1429848671505749570, guid: 1ad2771ecd6a34f4b9b897adf8fc199f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11063,8 +11063,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11555,8 +11555,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11684,8 +11684,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Make sure the team setup is correct
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12092,8 +12092,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12210,8 +12210,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12556,8 +12556,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12759,8 +12759,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12859,6 +12859,7 @@ GameObject:
   - component: {fileID: 809195570500556205}
   - component: {fileID: 5966592618722007296}
   - component: {fileID: 5289341242386589320}
+  - component: {fileID: 8731781574689798097}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13119,8 +13120,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13365,8 +13366,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13457,8 +13458,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13549,8 +13550,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14205,8 +14206,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 - Chara 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14467,8 +14468,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14679,8 +14680,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15229,8 +15230,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team B
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15472,8 +15473,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Team A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15796,8 +15797,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player 1 Selected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16113,8 +16114,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16205,6 +16206,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &8731781574689798097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3465478205831479049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6114fe1967edf834198a1b3a884bbd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  targetFont: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  includeInactive: 1
 --- !u!224 &8749757528460144138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16330,8 +16345,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c83efbd8715b43e40902514e00344252, type: 2}
+  m_sharedMaterial: {fileID: -5858465848446272439, guid: c83efbd8715b43e40902514e00344252, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

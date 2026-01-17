@@ -171,7 +171,7 @@ public class CharacterButton : MonoBehaviour
         }
 
         if (c.coldoncharabuf > 0)
-            info += $" [CD {c.coldoncharabuf - 1}]";
+            info += $" [CD {c.coldoncharabuf}]";
 
         return info.Trim();
     }
